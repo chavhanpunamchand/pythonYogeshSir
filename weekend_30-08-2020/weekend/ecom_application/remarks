@@ -1,0 +1,6 @@
+Entities --> Ecom Application --> datatype --???
+        Product --> id name price qty reviews
+        Customer --> id name address[id city state pin] account[id type bal]
+        Account --> id type bal
+        Vendor  --> regid name address[id city state pin] account[id type bal]
+        address --> id city state pin

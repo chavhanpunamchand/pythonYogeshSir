@@ -1,0 +1,44 @@
+selective
+        --> if..else        -->
+                condition --> can be any valid python code-->
+                           --> returns boolean
+
+                       False --> None,0,empty,False
+
+            if condition:
+                body
+            elif condition:
+                   body
+            else:
+                default body
+
+
+        --> switch --** --> not provided -->
+            switch --> why ??--->           --> directly jump to 65 ---> 1 sec
+            jump over -->
+            num = 65            --> 65  --> sequentional condition --checking--> 65
+            if num==1:
+                print(1)        # 1 sec
+            elif num==2:
+                print(2)
+
+
+             elif num==99
+                    print(99)
+
+iterative
+        -->for
+        -->while
+        -->do..while
+
+
+transfer
+        -->break
+        -->continue
+        -->pass
+        -->return
+        -->exit
+        -->try
+        -->except
+        -->finally
+        -->raise

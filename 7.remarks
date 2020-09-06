@@ -1,0 +1,338 @@
+selective --> any one -->
+
+    if condition:           -->1
+        pass
+    elif condition:     *   --> n
+        pass
+    else:                   -->1
+        pass
+
+These combinations are allowed
+                #if --> condition --** -->  else no condition --> default
+    if...elif..elif..elif* else
+    if..else
+    if..
+    if..elif..else
+    if...elif..elif..elif*
+
+    if-->first
+    elif --> in between --> followed by if and then else
+    else--> always at last
+
+    if
+
+
+# -->
+selective ---> any one at a time--> not more than that --> any one block --> either if..or elif..else
+        #else--> default -- as no condition -->
+
+    if ...elif*....else     -- when there are multiple conditions--> and one default-- in case no condition is matching
+    if..                    --> only condition--> no default
+    if..else                -->one condition-- if no match--then default
+    if..elif..else          --> 2 conditions with default
+
+
+
+b1 - 1/A
+b2 - 1/A
+b3 - 2/A
+b4 - 1/B
+b5 - 3/C
+b6 -- b1
+
+B1 - B2 --> ALL CONTENTS
+B1 - B3 --> ID DIFF-- NAME SAME
+B1 -- B4 --> ID SAME NAME DIFF
+B1 - B5 -- ID AND NAME --DIFF
+B1 - B6 --> REF SAME--> SO CONTENTS TOO
+
+BOOK
+    INIT
+    STR
+    REPR
+    eq --> True
+    hash --> 1          -->
+
+setBooks = {b6,b3}
+
+ 0
+
+ 1      b6
+
+ 2
+
+ 3
+
+ 4
+
+          *      *    *
+values = {10,10,20,20,30,30,10}
+
+           *     *    *
+values = {e1,e2,e3,e4,e5,e6,e7}
+
+                            e1  e3 e5
+           #3               10,20,30        cannot say
+ques --> set length --> which elements --> seq
+        --> do we have hash and eq --> on same property -->
+        --> create list based on duplicate -->
+        --> first placed --> pick only those- -->
+
+                            e1:v7 e3:v4 e5:v6 --> no--> as inserted -- seq maintained..
+ques --> dict length --> which element:value--> seq
+
+
+
+
+
+def m1():
+    print('inside m1')
+    return False
+
+def m2():
+    print('inside m2')
+    return True
+
+def m3():
+    print('inside m3')
+    return True
+            # or --> search for first true--> if found-- next cd dont execute--> loop body execution
+            #and --> search for first false --> if found - next cd dont execute --> go elif..else..outside the loop
+if m1() and m2() and m3():
+    print('Inside if')
+else:
+    print('inside else')
+
+import sys
+sys.exit(0)
+
+
+
+
+
+#looping -->
+#generic
+        #selective --> if..else             switch*
+        #iterative --> while   for          do..while*
+        #transfer  --> break continue  try  except  finally pass return raise
+
+#* --> python doesnt provide this--> we can implement this ..
+
+#selective --> either
+import random
+import time
+import sys
+
+
+
+
+
+
+
+
+
+
+#false condition --> None,False,empty,0
+
+                                #OR -->start from first--> search for true --> one found--> dont execute further conditions execute loop body
+                                #AND --> start from first --> search for false--> one found--> dont execute further conditions --> dont execute loop body too
+
+age = 25                        # or --?    any one True              and -- all true
+if age<=0 or age>70:            # c1 or c2  or c3                     # c1 and c2  and c3
+    print('invalid age')
+elif age>0 and age<18:
+    if age<6:
+        print('kid')
+    elif age<18:
+        print('student')
+elif age>=18 and age<60:
+    print('Employee')
+else:
+    print('Senior Citizen')
+
+
+
+
+
+
+if val:
+    print('Inside If')    #value present-->True,[[]],+ve,-ve numbers
+else:
+    print('inside else')  #None,False,empty complex type,0
+
+
+while True:  #always true -> infinite
+    val = random.randint(1,10)  # num print
+
+    if val%2 == 0:
+        print(val,' Even No') #even
+    else:
+        print(val, ' Odd No')
+
+
+    if val%3 == 0:  #seperatly --> not a part of first if-->
+        print(val, ' Divisible by 3') #21 --> 3 --> odd -----------> 18 --- even--> 2
+
+    time.sleep(1)
+
+sys.exit(0)
+
+while True:
+    name = input('Enter Your Name : ')
+    age = int(input('Enter Your Age : '))
+
+    if age>0 and age<6:  # 0 and 6 --> >0 and <6
+        print('{} is Kid, applicable for nursery!'.format(name))
+    elif age>=6 and age <16:
+        print('{} is Student..!'.format(name))
+    elif age>=16 and age <22:
+        print('{} is College Student..!'.format(name))
+    else:
+        print('Invalid age..')
+
+
+
+
+import sys
+sys.exit(0)
+
+
+
+class Account:
+
+    def __init__(self,acid,actype,bal):
+        self.accNo = acid
+        self.accType = actype
+        self.accBal = bal
+
+    def __repr__(self):
+        return str(self)
+
+    def __str__(self):
+        return f'''
+            AccNo : {self.accNo}
+            AccType : {self.accType}
+            AccBal : {self.accBal}
+        '''
+
+    def __eq__(self, other):
+        return self.accType==other.accType
+
+    def __hash__(self):
+        return self.accType
+
+
+ac1 = Account(101,"S",28322.3)
+ac2 = Account(102,"S",28322.3)
+
+setOfVal = {ac1,ac2} #1     --> ac1
+dictOfVal = {ac1:"x1",ac2:"x5"} # ac1-->x5
+
+
+
+
+import sys
+sys.exit(0)
+
+
+
+
+
+
+
+class Book:
+
+    def __init__(self,bid,bnm,bqty):
+        self.bookId = bid
+        self.bookName = bnm
+        self.bookQty = bqty
+
+    def __str1__(self):
+        return f'''
+            Book Id : {self.bookId}
+            Book Name : {self.bookName}
+            Book Qty : {self.bookQty}
+        '''
+
+    def __repr1__(self):
+        return str(self)
+
+    def __eq__(self, other):    # eq        hashcollision
+        return self.bookId == other.bookId
+
+    def __hash__(self):         #hash           hash
+        return self.bookId
+
+#[b1 - b2 -- b3 -- b4 -- b6] -- eq -- 1     #key --> first #[b1 - b2 -- b3 -- b4 -- b6]     -->value -- last value
+#[b5] --->                      eq -- 1
+
+#[b1 --> b2 --> b3 --> b6]      -->1
+#[b4]                           -->1
+#[b5]                           --->1
+b1 = Book(1,"A",21)
+b2 = Book(1,"A",21)
+b3 = Book(1,"Ax",21)
+b4 = Book(2,"A",21)
+b5 = Book(3,"A3",23)
+b6 = b1
+print('b1 ->',b1)
+print('b2 ->',b2)
+print('b3 ->',b3)
+print('b4 ->',b4)
+print('b5 ->',b5)
+print('b6 ->',b6)
+
+booksset = {b5,b6,b4,b2,b6,b1,b5,b3} #id -> b6,b4,b5 --> no seq         ---> elements b6,b4,b5
+bookset1 = {b5:'x1',b6:"x2",b4:"x3",b2:"x4",b6:"x5",b1:"x6",b5:"x7",b3:"x8"} #  b6:x8,b4:x3,b5:x7
+books = {b5:"Ax",b2:"Ay",b4:"A1",b2:"A2",b6:"A3",b1:"A4",b5:"A5",b3:"A6"} #b5:A5,b2:A6,b4:A1 --> 3
+
+print(booksset)
+print(bookset1)
+import sys
+sys.exit(0)
+
+
+#--> key duplicate --> dict --> key : value
+    # key ?? --> b4:A6
+booksset = {b5,b6,b4,b2,b6,b1,b5,b3} #keys--> b4,b5         --> b5,b6
+books = {b5:"Ax",b2:"Ay",b4:"A1",b2:"A2",b6:"A3",b1:"A4",b5:"A5",b3:"A6"} #b4:A6,b5:A5 -> values?? --> b5:A5,b2:A6
+#books --? pairs --? --> 2 pairs --> konte pairs -->> b4:A6,b5:A5
+
+print(booksset)
+print('---------------')
+print(books)
+
+import sys
+sys.exit(0)
+
+
+
+
+
+
+b1 = Book(1,"A",21)  #-->21    -->1 -->
+b2 = Book(1,"A",31)  #-->31    -->1
+
+values = {b2,b1}  # 2 ---> same -->eq-2 --> diff--> !eq -->
+
+
+import sys
+sys.exit(0)
+
+
+
+    #b1 == b2 --> eq--True
+#[b1 b2 b3 b4,b6] --> ans --->1--? equa --> 1 --hash same--> ekach bucket --> b6 == b2 == b3 == b4 == b6 -->
+#[b5]             --> ans -->1          --> 2-->    b6== b5 --? ??
+b1 = Book(1,"AAAA",2) # 1   --> 1   --> b1
+b2 = Book(1,"AAAA",2) # 1   --> 1   --> --
+b3 = Book(2,"AAAA",2)#  1   --1         --
+b4 = Book(3,"AAAAx",2)#1    -1          --
+
+b5 = Book(4,"AAAA4",5)
+
+b6 = b1
+
+setOfBooks = {b5,b1,b3,b6,b2,b5,b1,b2} # ? b1 b5 --> wrong  -->  b1 b5 -- seq dont knw
+print(setOfBooks)
+

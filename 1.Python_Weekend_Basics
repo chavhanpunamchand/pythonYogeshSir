@@ -1,0 +1,346 @@
+Python --> reason to choose python ?
+		easy as other compared to lang-->
+		easy syntax
+		widely used-- nowadays..
+
+
+Python 
+		high level 			---> application level coding
+		dynamically typed lang -- ?
+	
+-------------------------------------------------------
+Types Of Lang -->
+	High Level -- Python/Java/DonNet
+	
+						compiler/interpretter
+						lang vendor
+						[lang grammer]
+	word---->			program-->							machinecode[cpu]	
+				input					binary/machinecode
+	
+	more user-friendly-->
+	more interactive-->
+	keywords --> user friendly--
+	
+	print("Hello world") --> print this output on console
+	
+	consider-->developer --> understand -->
+	
+	use case -->
+	
+	 ? application development --> end user ---
+				end user --> interact with applications --->
+											input-- program --> cpu code
+													c/i
+	
+	application freq -> ?
+	 
+	dev - too fast
+	perm --> slow
+	
+Middle Level -->C,C++ -->
+	
+	cout("Hello World")
+	
+						lang vendor
+						[lang grammer]
+	word---->			program-->							machinecode[cpu]	
+				input					binary/machinecode
+	
+	keywords --> !user friendly--
+	
+	use case--> dev speed -- faster as compared to ll
+				perf -- fair
+	use case-->	
+		operating systems --> c lang
+		operating systems-- hard ware interaction--memory write-->
+		objects -- os =--> middle level langs --
+		
+|--win7--win8---win10----------------------------------------------------------|	
+		updates	updates	
+		
+		
+Low Level --> assembly lang--> 8085/8086--machine lang
+		-->Python -->  opecode/operand-> sheet --> binary
+			binary code --> machine - - output-->
+			1010001001010 --> its very diff to understand-->
+	1 char --> 2 byte -->
+	1 byte --> 8 bit -->
+	 Python --> 6 chars --> 6*8 - bits-->11100110011*
+						Python--> machine level -->
+		Diff to understand --> dev for diff -->
+		perm fast --> low level -- interacts -- with machines
+		
+										
+	use case--> space less--> computation fast --> per high
+				processor coding-->
+				mobile -- cpus-->
+				1 yrs --> processor ?
+				dev -- slow --space-- [ics -- hard ware comp]
+				perfm -- too fast -- it directly interacts with cpu
+1989	--------------------------------------------->2020		
+cpus --> p4 --> dual core --> quad -- octa - i3--i5--i7
+				core to duo
+				
+----------------------------------------------------->
+	
+	int		--> numeric value hold
+								java
+	int num=10	-- java --> 	program	--cpu
+								c++
+	int num=10	-- C++ --> 	program -- cpu
+
+	int 			--> java		--> rules diffr
+	int				--> c++			--> rules diffr
+	num = 10
+	
+	
+	int -- java -->  4 bytes	int num = 12718372137183712;
+					 1 byte -- 	-2^7 to 2^7 - 1			-128 to 127
+					 2 byte -- > -2^15 to 2^15 - 1
+					4 byte -->   -2^31 to 2^31 - 1
+						4 byte
+					int num = 1219273213; - 4 byte
+					byte num = 123;		byte -- 1 byte
+					short num = 122;	short -- 2byte
+					int --> 127-- un necessary -- 4 byte -- 1byte- -> wastage--
+							computer -- world - space -- speed -- time --> matter -- resources 
+										resources shud be utilitized properly
+	int --- c++  --> 2 bytes
+				int num = 10 -> 2^15	-->program --> 2 byte
+	
+	
+	num = 10	---> ?
+	
+						msb
+						+/-
+						0 = +ve
+						1 = -ve
+						sign bit	64		32		16		8		4		2		1	- 127
+	1 byte - mem -->	0			0		0		0		0		0		0		0
+	
+	num = 110			0			1		1		1		1		1		1		1
+	low level
+	binary
+	
+	
+								 Mindset
+	Marathi	-- Shubh Sakal	--					
+														same
+	English	-- Good Morning	-->
+
+
+
+variable --> any specific memory location on which we are going to store value
+
+	variable -num	--> memory location
+
+	datatype - int	--> what type of data on tht memory
+	
+	value 	- 10		--> specified datatype
+	
+	
+							c++				java++				
+	int num = 10			2 byte			4 byte
+		num = "A"
+	
+	types -- mandatory -- strict -- before placing value
+	size -- limit
+	
+	
+	first of all  - u tell me what type of data --  -- will allocate memory - > then u 
+	can place value of same type
+	
+	python
+				no need to tell type -- directly inferred from value
+	num = 10 -- u can places the value on memory location -- no need to datatype -->
+				python will dyanmically infer the type of variable based on value-->
+				
+				dataype -- dyanamic -
+				size -- dyanamic - as much as memory u can u can store larger value
+						
+---------------------------------------------------------------------------------------->
+								python grammer -->
+										python fundamentals --> basic
+	program -- -- will convert ur code -- into machine code --
+					Python Interpretter --> download ---....
+					
+				Step1 -- https://www.python.org/downloads/					3.8.5
+							
+							3 -- major version -> major impact
+							8 -- minor version
+							5 -- patch number
+				
+				whatsapp -->
+							2012 --	
+									txt msg --> 1.0.0
+									multimedia --only images --> 2.0.0 --> we brand new functionality
+																			which was nt thr prev
+																			
+									multimedia --images/video -- 2.1.0 --> existing functionality
+																			 extension
+									multimedia --pdf/txt/  --- 2.2.0	-- existing functionality
+																			extension
+												code changes -- 2.2.1	-->patch --code--
+																		defects--issues--> patches
+	 -->			
+			    Step2  --> install as we install normal softwares--
+					after installation --
+					
+		C:\Users\Yogesh\AppData\Local\Programs\Python\Python37-32
+		
+		
+		
+		C:\Users\XXXX\AppData\Local\Programs\Python\Python3X-32
+		
+		
+						interpretter 
+		python code --> program -----------------> machine code
+		
+		
+		
+		
+	---> open control panel -->
+					top righ corner --> env
+											Account -- specific account
+											System -- all accounts-- admin
+												click on system --
+																enviroment variables
+																		-->
+		
+		PYTHON_HOME		C:\Users\Yogesh\AppData\Local\Programs\Python\Python37-32
+			
+			let ur os know-- where is the python interpretter
+	
+	
+IDE --> Integrated developement Env
+		--> IDE -- intelligence-->
+	SOFTware -- Pycharm --> IDE --> Python Full Stack
+						developer--> pycharm
+				VsCode
+				Eclipse
+				Atom
+				jupytor/spider
+				
+	
+	https://www.jetbrains.com/pycharm/download/#section=windows
+		Community -- edition --> download and install -->
+		normal - -program files--> scripts-->dev-- 
+		
+
+Notepad++ -->
+			 
+Python - basic- -> to run any python code..
+
+ --> Types of Lang-- High/Middle/Low
+ --> Dyamically Typing -- > size/datatype
+ --> python interpretter 
+ --> Intepretter configuration
+ --> Pycharm Installtion
+ --> env variables configuration
+ --> set Interpretter path inside IDE  
+ 
+>python --version
+>pip --version
+
+	python -- > appdata --			python - -use -- python develop
+			lang level design/decision
+	
+	int num = 10;	-- lang
+	abc --?				lang level design
+	
+	demand mode--
+	
+	
+----------------------------------------------------------------
+		everyone --?
+				pycharm installation -- community edition
+				python interpretter --> 3.8.5
+				
+----> ?
+		
+		
+		
+-- pycharm - community
+   python 3.85
+   nodepad++
+
+C:\Users\Yogesh\AppData\Local\Programs\Python\Python37-32
+path  -- edit
+
+			variable name		path
+			variable value		3asd18372198fkjsfkh247hfs;%PYTHON_HOME%;%PYTHON_HOME%\Scripts;
+			
+-->
+	realpython
+	journaldev
+	data-flair
+	
+	Tester -->
+		guru99
+	
+	
+
+
+Datatypes--
+		Simplex
+				number
+						int			-->  num = 10
+						float		--> num = 128.34
+						complex		--> num = 123812+2j
+				string			''
+								""
+								
+								multiline string
+								'''	'''		val = '''a'''
+								"""	"""
+								
+				boolean	-- True/False
+				none	-- absence
+							num = None
+
+
+num = 10
+num = 28182.23
+num = 128+3j
+num = 128+3J
+val = 'abc'
+val = "abc"
+val = ''' 
+          Step1  : Download Python 
+          Step2  : Install it       
+      '''
+
+val = """ 
+          Step1  : Download Python 
+          Step2  : Install it       
+      """
+flag = True
+flag = False
+val = None
+
+plot - purchase --> hospital -- 		
+			[hospital]
+			
+			plot = None
+			
+			ploat = ''
+			
+
+
+represents individual /single value
+
+val = None  #plot-- memory --> Absence of value
+val = ''   #plot -- hospital --> no -- empty
+val = 'abc'#plot - hospital
+
+
+
+				
+		Complex Types
+				list
+				set
+				tuple
+				dict
+				
+				

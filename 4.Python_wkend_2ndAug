@@ -1,0 +1,423 @@
+import copy     #deep,shallow
+
+
+#list--set --> copy --? shallow copy
+#import copy -- deepcopy
+values1 = [10,20,30,40,50]  # shallow and deep --> same
+values2 = values1.copy()        #always -->shallow
+values2 = copy.deepcopy(values1) #deep
+values3 = copy.copy(values1) #shallow
+
+
+
+original = {10,20,30,[100,200]}
+duplicate = original.copy()  # duplicate created from original--> from shallow  copy
+
+#what is the use case--? copy ?--> for backup purpose-->
+                            #--> security purpose--
+                            #--> orignal -- duplicate ?
+                            #duplicate--> creating original-- is costly process
+# 10 machines --> python setup-->
+                #windows --> python --> pycharm--> notepad-- office--> 5hrs
+                #10*5 ---> 50 hrs
+
+        #windows --> python --> pycharm--> notepad-- office--> 5hrs-->images-->
+            #-- on other machines-- 5hrs -->  3 --> 6 --> 10
+                                    #5         1    1   1 --> 8 hrs
+									
+------------------------------------------>
+
+
+
+-->Dataypes
+	Simple Types--> holds ind -- element--> NA (same type)--
+			Number --> int,float,complex
+			String
+			boolean
+			NoneType
+	Complex Types --> holds grp of element--> hom+htro--> DS-> Growable
+			
+			List
+					--> Duplicates allowed --> Insertion Seq Maintained
+					--> multiple NoneTypes Allowed
+					--> Array --> index based operations
+					->Mutable
+					--> SI2R2 PA C4E --> sort,Insert,Index,Reverse,Remove
+									--> Pop,Append,count,Copy,Clone,Clear,Extend
+			Set	--->
+					Unique -- SingleNonetype--No Seq
+					-->hashtable*
+				--> add -- remove -- pop[first from hashtable] 
+				--clear - ->copy
+				--> discard
+					ccd	--> ccd par-->
+					
+					remove--> set.remove(15) ---> 15%5--> bucket--0
+													15-- 0-->
+														first 0th-->
+															all scan-->
+					
+					
+					
+				---> diff,inter,sym_diff,uni [return]	--> _update {orignal]
+				---> isSuperSet,isSubset,IsDisjoint -->
+				
+				hashtable --> indexing-- to identify bucket-->
+						--> check inside that bucket->
+									if no duplicate--> node add
+						performance --> slow --> uni--> no of elements-->
+								rehash --> 0.75 --> no of elements/no of buckets-->
+									double--> buckets--> element--> rehash --%5...%10
+						-->
+			Tuple	-->
+			Dict
+			
+			
+-=----------------------
+tuple --> 4+	--> grp of elements -- hom/hetro --DS --> growable[exceptional]*
+		-->immutable ---> means cannot grow
+		--> DS --> Array--->
+		--> append/insert/remove/pop/extend/clear/
+
+		once created cannot be changed-->
+			what is the usecase --> to hold predefined constants-->
+				-- days of week --> MON,TUE,
+				-->GenderType -->
+				-->Universal constants--> month names-->
+				-> environments--> 
+				and so -->
+				
+Dict --> pair --> key,value --> 1 element--
+			key
+				-> unique
+				-->singleNoneType
+				--> insertion seq maintained->- >3.6 --python version
+				
+			value --
+					--> values will be with key--
+					--> duplicates allowed
+					--> multiple nonetypes too allowed
+		---->
+			DS -- hashtable -->  !insertion seq --> buckets--
+			
+
+
+datatypes--> with datastructure-- and methods --thr use cases---
+
+
+
+
+
+	18	23	46 77  82					HASHTABLE
+		
+		18%5 --> 3
+
+	76%5 --> 1 --> FIRST BUCKET --> NEXT ---> WITHIN BUCKET
+
+SET --> !SEQ
+	
+0
+
+1	[46,NEXT]
+		55X
+2
+
+3	[18,56X]	[23,NEXT]
+		45X		 56X
+4
+
+DICT --> SEQ		
+		SEQ --> SEARCH- BEFORE ?-->
+			18--> AFTER--> 23 -->AFTER -->46 -->AFTER --> 77---> 82
+	
+		SET --> DIRECT--> LIST -->
+		
+		LIST --> DUP + SEQ	--*
+		SET -- UNIQUE + NO SEQ	*
+		DICT -->UNIQUE + SEQ	--*
+		
+		
+			
+	76%5 --> 1 --> FIRST BUCKET --> NEXT ---> WITHIN BUCKET
+		
+	SEQ --> AFTER--> DICT - EXTRA OVERHEAD --
+	DICT[12]="X"	-- ?	--> 46 KEY PRESENT --> EXISTING VALUE REPLACE
+								46 KEY ABSENT --> NEW PAIR -- APPEND--> 
+										CAN BE INSIDE ANY BUCKET--
+											BEFORE/AFTER -->
+
+	233%5 --> 3 -->
+
+0
+
+1	[56X 46:X NEXT 88X]
+			55X
+2	[55X 77:V2 90X,90X]		[88X 82:V2 NEXT AFTER]	[]
+		88X							90X
+3	[BEFORE,18:V3,56X,56X]	[45X,23:V4,NEXT,55X]	[90X,233]
+		45X						56X
+4
+
+
+
+Ping--> weekdays--> cover --> before nextweek--> syncup
+			--> 72 76 478 102
+			
+	Amol Patil
+	Makarand
+	Meena
+	Monali
+
+
+
+
+
+
+
+
+data-flair
+realpython
+journaldev
+
+
+programmiz --> refer this --> methods n all->
+
+
+	hashtable --> generic-->
+	
+
+list-- searching
+linkelist-- insertion/deletion--
+
+in both cases- -->  hashtable
+
+no index based operations--> no continous memory - internal ds is hashtable-->
+					to provide better perm--  in searching/retrival as well as in insertion and deletion-- context
+		Dict
+			[before prev data[key:value] next after]	
+			
+					prev/next- --> within bucket element 	---> searching
+					before/after --> let it be inside any bucket-- for seq
+		set
+			[prev data next]	--> searching --- bt no seq
+			
+specific			specific			generic
+list				tuple ---> array
+array - new			NA
+		append		NA
+		extend		NA
+		remove		NA
+
+set			dict		----->hashtable
+
+!Seq		seq
+
+
+
+? --> for faster developement--> readymade methods-->
+		logic -->
+		
+		
+		
+		make sure--> dict keys should be immutable in nature--
+		keys -- unique,immutable --keys--> bucket--> key
+		all operations shud be on key --> 
+		
+		values--> mutable,duplicate
+		
+		
+OOP --> will start with OOP --> from next session
+
+
+values = [10,20,30,40,50]
+
+
+for i in values:
+   print(i)			#10	20	30 	40 	50
+   
+  
+for values in values:
+	print(values)		
+	
+	
+	
+import sys
+
+values = [10,20,30,40,50]
+
+for i in values:
+    print(values)  #[10,20,30,40,50]
+                   # [10,20,30,40,50]
+
+
+
+sys.exit(0)
+
+
+
+from itertools import zip_longest
+
+
+
+dtvalues = {1:10,2:20,"A":"AAA","B":"BBB"} # len - 4 --> will indexes works--> NO
+
+
+
+#[before data next after]
+    #afterbefore --> inside any bucket-- not -- seq
+    #next --> within bucket --> searching
+
+
+values1 = [item for item in range(100)]
+                                                #10,15
+#newdt = zip -- all key value assignements --> dict(zip(l1,l2)) #  l1 -- elements- pair
+#newdt = zip_longest --> -- all key value assignements --> dict(zip(l1,l2)) #  l1 -- elements- 15 pair  --> 10 value-- 5 None
+#newdt = dict.fromkeys(l1) -->  with default values--> pair-- no of elements inside list-->10---> None
+#newdt = dict.fromkeys(l1,"X") -->  with default values--> pair-- no of elements inside list-->10---> X
+
+#newdt[key] = newvalue--> will change value of specific pair
+
+
+
+
+#values2 = ["Pune","Mumbai","Chennai","Hydrabad","Bglore"]
+newdt = dict.fromkeys(values1)
+newdt[34] = "XXXX"
+print(newdt)
+#newdt = dict(zip_longest(values1,values2))
+#print(newdt)
+
+sys.exit(0)
+#print(values)
+
+
+#newdt = dict.fromkeys(values,"A") # values dict--> values-- keys
+
+print(newdt)
+
+
+sys.exit(0)
+
+
+values = [1,1,1,20]
+values.pop(20)# error --> pop -- index ????
+values.remove(20)# --> element based
+values.pop(3)# index -- position based
+# if u dont to replace existing value- and sure not sure about key -- present.absent
+ans1 = dtvalues.setdefault(33,"XXX") #33 --key -- absent-->
+                                                # will simply append that pair
+                                #{1:10,2:20,"A":"AAA","B":"BBB",33:"XXX"}
+                                #ans1--> "XXX"
+ans2 = dtvalues.setdefault(2,"XXX") #2 -- key present--> will not add pair,no replace
+                                        # will simple returns existing value of 2-->
+                                        #ans1--- 20 --
+
+
+dt2 = {"X":200,"Y":300,1:100}
+#keys --? using get
+#values -- keys --> no-- duplicate
+#items --> key,value--
+
+dtvalues.get("a") #20  AAA --> None -- polite
+
+dtvalues.popitem()  # last pair --> will be removed --b
+dtvalues.popitem()  # last pair --> will be removed --a
+#dtvalues.pop(5)  #set --> pop -- will remove first from hashtable
+                #list - pop(index) --> will remove index position item
+                #dict - pop(key) --> will remove that pair
+
+
+#update -- to merge to dict-->
+ans = dt2.update(dtvalues)
+print(dtvalues) #{1:10,2:20,"A":"AAA","B":"BBB"}
+print(dt2)#{"X":200,"Y":300,1:10,2:20,"A":"AAA","B":"BBB"}
+print(ans) #NONE
+
+sys.exit(0)
+
+
+ans = dtvalues.update(dt2)
+print(dtvalues) #{1:100,2:20,"A":"AAA","B":"BBB","X":200,"Y":300}
+print(dt2) # {"X":200,"Y":300,1:100}
+print(ans) #None
+
+
+
+
+
+
+
+
+dtvalues.items() # returns list of pairs
+dtvalues.values() #returns list of values
+dtvalues.keys() #returns list of keys --
+dtvalues.copy() # shallow copy -- > import copy--deepcopy
+dtvalues.clear() # will clear dict-- makes empty
+
+
+
+
+
+listofkeys = dtvalues.keys() #[1,2,A,B]
+listofvalues = dtvalues.values() # [10,20,AAA,BBB]
+listofPairs = dtvalues.items() #[(1,10) (2,20), (A,AAA),(B,BBB)]
+dtvalues["X"]="xxx" # add new pair --> append--> insertion--
+            #{1:10,2:20,"A":"AAA","B":"BBB","X":"yyy","x":"yyy"},
+dtvalues["x"]="yyy"
+
+#hashtable-->seq ?
+
+
+
+sys.exit(0)
+values = {} #empty dict
+values = {1:100} #dict
+values = {1} #set
+
+
+
+
+v = (10,20,[100,200])
+
+
+
+values1 = [10,20,30,40,("X","Y")]
+values1[0]=100 # will work
+values1[4]=100 # will work # list--[4]--> tuple-- left--> 100--change-- inside list
+values1[4][1]=100 # wont work
+values1[4].clear() # no such method for tuple
+values1[4]=None # will work
+
+values2 = (10,20,30,40,["X","Y","Z","AA"])  # tuple holds --> 4 int --> one list
+values2[0]=100 # won't work
+values2[4]=100 # wont work
+values1[4][1]=100 # will work       # 4 int and one list
+values1[4].clear() # will work      # 4 int and one list
+values1[4]=None # wont work # tuple
+
+sys.exit(0)
+
+values = ("MON","TUE")  # 0:False    1:True
+
+values.index()
+values.count()
+
+
+v = values.index(1) # Array
+print(v)
+
+
+
+values = (10)  #int
+values = (10,) #tuple
+values = 10,       #tuple
+values = 10,20,30,"X" #tuple
+values = tuple()    #tuple
+
+	
+	
+	f = frozenset((10,20,30,40))
+print(f)
+
+#unique-- mutable
+#unique + immutable

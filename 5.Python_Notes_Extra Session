@@ -1,0 +1,335 @@
+	
+-->Why Python
+
+-->configuration steps--
+		-->repeat ?
+
+pycharm -->			https://www.jetbrains.com/pycharm/download/#section=windows
+		download community edition and install -->
+			c:program file\pycharm -->
+					
+	IDE --> integrated dev env--> to write code-->
+								Intelligence---> faster developement
+								
+python interpretter -->https://www.python.org/downloads/ --> 3.8.5
+	install --> 
+						let it be default dir-->
+						
+	C:\Users\XXXXX\AppData\Local\Programs\Python\Python38-32
+	
+	code--> python lang--> interpretter --> machine code [binary]--> 
+	
+NotePad++--> rough sheet-->  notepad++ --> autosave--*
+	
+--> ping--> **
+
+Amazon--> normal customer--> prime	
+	
+-->Types of langs --> Low/Middle/High
+		Low 
+				--> assembly--> 1010101010
+				--> developement slow --* --> binary format
+				--> performance fast -->  directly cpu
+				
+				Yogesh --> 	Y char -> 8 bit		10101101	-- 8*6
+							o			 8 bit  10011111
+--> system coding-- processor coding--> 							
+		Middle	--> c,c++ --> vendor-->
+		
+				cout(Yogesh) -> cout -- c++-->		intepretter--> binary/machinecode
+													Program --> intepretter--
+				code- ->program --> machinecode --> slow
+												--> fast
+		
+		operating systems--> hardware interfacing--* middle level
+		
+		High--> python,java,DotNet and so on
+				
+				print(Yogesh) -> cout -- c++-->		intepretter--> binary/machinecode
+													Program --> intepretter--
+
+
+				code- ->program --> machinecode --> slow
+												--> fast
+												
+		end user--> application --> high level-->  development time--* less-->
+											need to develop as early as possible
+				travelyaari -->
+				irctc
+				redbus
+				ola
+				uber
+				
+
+Python -->								interpretter --> 3.8.5
+			interpretted	--> code -->program -->convert-->machine code
+			High level		--> wording-- > more user friendly
+			Dynamically Typing*
+			Object Oriented*
+			Functional Programming
+			procedural
+			Open source
+			supports duck typing
+			Scripting/Programming lang
+			
+java--*
+
+
+-->Compiler vs Interpretter-->
+									python -- 3.8.5
+								  Interpretter
+						code ---> program --> machine code
+
+	Slow **		
+			code			convert				machine code				
+			A.py	-->  python A.py		---> output
+			
+			check repeat --> 100 process
+							A.py - > compiler --> syntax checking
+									interprettation --> conversion -- code to machine code
+	
+
+	compiler -->  compiled + interpretter -->
+				A.py --- > compiler --> A.pyc ---> interpretter --> machinecode/output* --> clinet code--*
+	Java Fast		
+			Code --->  compiler --------> bytecode/intermediatecode--> interpretter-->machinecodeoutput
+			A.java---> javac A.java --> 	A.class---------------> java A -------> output
+			100 process
+						initially --> syntax checking--> bytecode--
+															bytecode-
+			
+			
+											50 process
+											--> A.class
+											
+compiler --> syntax checking as per lang grammer -->correct--> intermediate code/bytecode [not in human readble format]
+		--> line by line process --> source code la--
+		--> 100 --->		15		46	78	-->	 will compile start to end-->
+					will showcase-->all errors--*
+						Polite--*
+						
+						costing--> less--*
+						
+						
+						Open("c:abc/xyz.txt") --> runtime
+Interpretter--> conversion --> code-->machine code --> aggressive --> 10/0		[10,20]	--> [2]--> error
+		--> line by line process --> intermediate/bytecode la
+	-->--> 100 --->		15		46	78	-->	 will process line no 14--> and incase there is problem at 
+				line 15--> will stop entire execution there itself--> will never process next lines.
+				
+
+
+		
+			code --> 50
+			
+						Python				--->
+			ABCD -->
+						JavaInterpetter		-->
+			
+			
+			
+			
+			
+			
+			
+
+swing-->des
+virtaul --> jre --> start -->*
+*jvm/jit -->virtually -> interpretter --** java 
+
+--> python interprette --* physically 
+
+
+
+-->Python Datatypes --> libs--> *
+		Simple--> number[int,float,complex],string,bool,nonetype --> it holds single element at a time
+		
+		num = 10        #int
+num = 199.23    #float
+num =29923+3j   #complex
+num =29923+3J  #complex
+val = 'abc'     #str
+val = "abc"     #str
+val = '''abc''' #multiline str
+val = """abc""" #multiline str
+
+flag = True     #boolean
+flag = False    #boolean
+
+val = None      #noneType
+
+
+
+
+
+		
+		
+		Complex --> list,set,tuple,dict
+												int				float		complex [expontial form]
+		number  -->								num =10		num=991.23		num  = 883+2j
+		string		--> seq of chars -->		val = 'abc'		val="abc"		val='''abc'''		val="""abd""" [multiline string]
+		boolean		--> True/False
+		absence of the value --> null---> None
+		
+		
+		
+		
+-->DataStructure-->Array,Hashtable,LinkedList
+--> Hashing-->Indexing-> rehashing..
+
+
+1--> Python --?
+		-->Easy to Learn
+		-->Market demand--> rich set of libs-->
+		--> Cpython,Anaconda,Pypy,Jython --> implementation--> specific domain
+		--> mathmatically problems--> datascience libs
+					functional --> java8--> 2014/12--**
+					python - 1989--*	--> 2005/2010--> 
+		--> sytanctially easy..
+		--> data generate -> 25% -->--> libs--> python--> rich --> libs --? Data ??
+					data --> 2005--> online--> 
+		
+		
+		vehicle--> smart vehicle--> condition--> road --> 
+		
+--> Python --> rich set of libs-->  input-- data--> generate --> social networking/ecom/digitalazation-->
+														facebook--> 2005
+														whatapp --> 2012
+														flipkart--> >2000
+														Banking--> 		---> online--> 2010--> data generate rate-->
+																	format--> writing--> processing--> not possible
+											hom
+											hetro
+											structu
+											unstruct
+
+
+Python --  Java --> ?
+		params-->		costing--**
+						team--skills
+						requirement-->business-->
+			Client + Solution Arch--> feasibility -- study
+			
+User perspective--> which thing is better ? --> online--> >=2000->generate--
+				rich set of libs--> process ?
+				
+				money --->Business thru --> idea -->
+												--> User base ?
+				
+
+raw data -- > process--> which user--> interested in --> stock->availibity-->discounts
+						--> region-----------> information
+			morning --> google search --> smart mobile-- 10k-15k --?
+						--*			--> course-->python
+						
+			evening--> tutorials --> site--> advs--> discounts-- *
+						--*			courses ads-->
+						
+						flipkart/amazon
+						--> udemy--*	-	->  100 users--> 25 users --> click-- 10 buys -- 0--10: ads
+		Ola	-->
+		Uber -->
+		
+		Flipkart
+		Amazon
+			
+			web apps -->
+					--> basics-->
+					
+		stats--> plot--> reporting--> python
+skillset		
+		java team --> web app dev-- which will collect info --->diff--> libs
+		python team -> to process that infor-->
+		
+		
+		python -- web + processing+ reportings--> everyting **
+		
+		Business--apps--*--> better -features--> user friendly--> ?apps-->  processing--
+		AWS
+		Azure
+		
+		Travelyaari
+		Makemytrip
+		Redbus
+		
+		PhonePay
+		Paytm
+		GooglePay
+		
+		
+		
+num = 10
+
+values = [10,20,30,40,5]
+
+
+
+
+'''
+list
+
+variable --> specific memory location
+num --> variable--> which is pointing to specific mem location
+= --> assingment operator
+10 --> value
+type of num --> int
+'''
+    
+'''
+#tuple --> immutable
+#new batch --> cordinate --*
+
+complex types- ->   holds group of elements 
+                    hom+htro data element allowed
+                    every complex types-->  backed by datastructure --> way defined--> how to process[storing/org/manipu/retr] data
+                    every ds --> growable in nature
+                    
+#variable --> mem location 
+#datatype --> type of data memory has/have -->
+#dataStructure --> way of orgnizaing/storing/manipulation -->
+
+list    --> 4+
+    --> inseration seq is maintained
+    --> duplicates are allowed
+    --> multiple nonetypes are allowed
+    --> mutable
+    --> operations supported--> add/remove/insert/delete --> crud
+    -->backend data --> array *
+                Array --> contigous memory -->fixed in size--> cannot grow/shrinkup--> +ve indexing--> index based oprtn
+                        --> operations allowed ---> retrive + replace 
+                        
+    list --     []      list()      [10,20,30,4,"X"]
+    set -->     --      set()       {10,20,30,40,"A"}
+    tuple -->   (,)     tuple()     (10,20,30,"A")        
+    dict -->    {}      dict()      {"a":10,"b":29}
+
+set -> 4+
+        --> duplicates not allowed -- >unique
+        --> insertation seq not maintained
+        --> single nonetype is allowed
+        --> backed by --> Hashtable
+        --> mutable
+
+tuple   --> 3+       --> cannot grow ds
+        --> immutable
+        --> all other list properties--
+        use case --> to hold predefined constants--> days of week/year names
+
+
+
+
+dict --> 4+
+        key --> unique -- duplicate not allowed
+                --> key insertation seq in maintained after 3.6
+                --> single nonetype is allowed 
+                --> key --> shud be immutable***
+                
+        value --> can be duplicate--> multiple nonetypes--> and so on
+                
+
+programmiz **
+realpython
+data-flair
+journaldev
+
+'''

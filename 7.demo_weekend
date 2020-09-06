@@ -1,0 +1,537 @@
+import sys
+
+'''
+Object ORieneted Properties -->
+    Asper -->
+        class --> template/structure/--> user/system defined blueprint--> template
+        object --> instance -- of class --> user,system -- datatype
+        
+        Abstraction --> hiding internal implementations-- where as showcase only--> essential details to the end
+                    user -->
+                    vendor --> end user --> expections --??
+                                    bluetooth --> Android --??
+                                    rich features-->  end user ??--->
+                                compititors ???
+                                end --? user --> user may or may not be interested
+                                security -- details -->
+                     code sharing --> !!!
+                        --> security to the applications
+                        --> user may or may not be interested
+                        --> new business-->
+                                
+                              
+        
+        Polymorphism --> same behivour --> diff implementations-->
+                    -? typing --??? -->
+                    ---> speaing --??
+                    --> polymorphims always--> method context --> method --> lines of code ** set of instrcutions
+                 set of instructions- --> method name same--> internal implementation as per --> entity   
+                    color
+                    name
+                    id 
+                    
+        Inheritance  ---> inheriting/extending properties of parent into child --> reusability 
+        
+        
+        Encapsulation --> wrapping data and methods-- into single unit--> class/object/innerclasses
+
+weekdays --> weekend batch --> 8/8.30--> sat--> 
+
+
+'''
+
+
+
+
+
+
+class Emp:
+
+    def __init__(self,eid,enm,esal=0.0):  # this is for intialization purpose--> object properties
+        self.empId  = eid
+        self.empName = enm
+        self.empSal = esal
+
+    def __str__(self):  # returns string --> in both scenarios --> individual --> groups
+        return f'''
+                Emp Id : {self.empId}
+                Emp Name : {self.empName}
+                Emp Salary : {self.empSal}
+        '''
+
+    #whenever u have group -->*
+    def __repr__(self): # from grp --> visit each emp and pass that ref --> to str -> group of objects
+        return str(self)
+
+    def __eq__(self, other):
+        return self.empId == other.empId
+
+    def __hash__(self):
+        return self.empId
+
+
+
+
+# design --> write--> code - -> equality -->
+#calling --> hash --> index ??
+
+e1 = Emp(1,"A",1) #place
+e2 = Emp(1,"A",2)  #discard --> id same as e1
+e3 = Emp(2,"A",3)  #place
+e4 = Emp(2,"B",4)#discard --> same as e3 -- id
+e5 = Emp(3,"C",5) #place
+e6 = e1 #discard--> same as e1
+
+setOfEmps = {e1,e2,e3,e4,e5,e6} # len --> 3 -- ? e1  e3  e5
+print(len(setOfEmps))
+print(setOfEmps)
+
+sys.exit(0)
+
+print(e1 == e2) # T
+print(e2 == e3) # T
+print(e4 == e5) #F
+print(e6==e3) #T
+
+
+
+
+
+
+sys.exit(0)
+
+#set properties --> duplicates not allowed -Unique Elements
+                #--> single NoneType
+                #--> No Insertion Seq
+                #-->mutable
+                #ds --> Hashtable  --> indexing -> buckets
+
+
+setOfvalues = {10,10}  #duplicate ?? --> yes ?? -- {10}
+
+e1 = Emp(101,"AAAA",333.3)#    Yes      yes      yes         id-->Yes
+e2 = Emp(101,"BBBB",333.3)#    Yes      yes      yes               Yes
+
+print(e1 == e2 )  #fasle --> no eq --> means coming frm object clss--> ref checks --> which is false
+                           #fail
+
+                        # class ---> hashtable place --> set/dict --> make sure--> hash and eq --> on same property -->
+                                # set/dict--> will not work properly
+                            # set = int --> str -- --> hash/eq --> override
+                            #          10 10        AA          e1 e2 [dev]--*
+
+sys.exit(0)                #s1        s2           s3         s4          s5
+#      object          hash eq      hash eq     hash eq     hash eq     hash eq
+#      emp              -   -       *     -      -  *       *     *      *   *
+                                                   #        id    nm     id  id
+
+#s1 --> index -->  memory address
+#s2 ---> user defined property vr
+#s3 -->  memory address
+# s4/s5 --> user defined property
+                #end user- -> duplicate ??? --> set -- 1 --> 2
+        #e1 - 1/a---> mem --> 111
+        #e2 - 1/a --> mem --> 122
+
+#s1
+    # 0
+    # 1 e1  e2
+    # 2
+
+
+                        #fail --> expected 1--->actual 2
+                                            #hash-->id  -->eq --> ref ??
+        #e1 - 1/a---> mem --> 1
+        #e2 - 1/a --> mem --> 1
+
+#s2
+    # 0
+    # 1 e1  e2
+    # 2
+
+
+        #eq -->  name  --> fail **
+        #e1 - 1/a---> mem --> 12771 --> 1
+        #e2 - 1/a --> mem --> 12881 --> 2
+
+#s3
+    # 0
+    # 1 e1  e2
+    # 2
+
+
+        #hash --> id        eq --name       --> 1 --> fail
+        #e1 - 1/a---> 1
+        #e2 - 1/a --> 1
+
+        #e2 - 2/a--->
+            #1 --> 1 or 2
+
+#s4
+    # 0
+    # 1 e1  e2
+    # 2
+
+                    #id   id
+    #override --> hash and eq --> same property --> write --> hash/eq --> eq -and hash --> hashtable --> hash-->eq
+        #e1 -- 1/a
+        #e2--> 2/a
+                # expected ?? --> 2
+#s5 --
+    # 0
+    # 1  e1  e2
+    # 2
+
+
+
+
+
+# two diff objects can be equals by content equality -- depends on eq property-->
+# two diff objects pointing same mem --> will always be equal by content equality - True
+
+# 12 55 23          e1          e2          e3
+    #12%5 ---> 2
+
+#e1-1/a          e2-1/a          e3 -2/a
+#   34x             53x             28x                 --> memory address --> hex --> %5 --??? --> index-- number
+#hex --> integer -->
+#   12676           2781            12781               --> hash --?? -> index --?? -->bucket --> hashtable --?? better perfomr--> searching/insertation/deletion
+
+      # 12676%5 --1
+
+
+
+
+#0
+
+#1  e1
+
+#2  e2
+
+#3
+
+#4
+
+
+
+# e1 -->1/A     e2 --> 1/A
+setValues = {e1,e2}  # no of elements >>> equality --> eq -->
+
+        # e1 == e2 --> check eq method inside emp cls -->   present --> check on which property --> value ??
+                                                        #   absent --> e1 and e2 cha ref/memory --same or not??
+
+
+
+
+setEmps = {e1,e2} # duplicate ?? --> depends -> who defined this class--> dev--> dev responsible to tel equalitity cr ??
+                    #user defined --> class --> equalitiy --> class--> eq method ??
+                                                                            #absent --> object class --> eq --> ref equality --> addresses ?
+                                                                            #present
+
+                               #type    props   content     duplicate
+
+
+#how many emp objects --> 2 --> how many ref- ->3
+e1 = Emp(101,"AAA",2033.3) #1x              --> e1 and e3 --> 1x
+e2 = Emp(102,"BBBB",2433.3) #2x             --> e2 --> 2x
+e3 = e1
+#e3 --e1 ---> ref - yes ?? --> content always same --*
+employees = [e1,e2]
+#print(e1) # e1 --> who type--> Emp --> str -check ? --> Yes--> print             No --> parent --> Object--> str --> mem address
+print(employees) #group of emp types -->
+                 # type -> employees --> list--> rep --> Emp ???
+
+
+sys.exit(0)
+e3 = e1
+
+print(e1) #memory address
+print(e2) #memory address
+print(e3) #same as e1
+
+
+import sys
+
+
+class Emp:
+
+    def __init__(self, eid, enm, esal):  # this is for intialization purpose--> object properties
+        self.empId = eid
+        self.empName = enm
+        self.empSal = esal
+
+    def __str__(self):  # returns string --> in both scenarios --> individual --> groups
+        return f'''
+                Emp Id : {self.empId}
+                Emp Name : {self.empName}
+                Emp Salary : {self.empSal}
+        '''
+
+    # whenever u have group -->*
+    def __repr__(self):  # from grp --> visit each emp and pass that ref --> to str -> group of objects
+        return str(self)
+
+    def __eq__(self, other):  # emp class content equality is on--> empid -->
+        return self.empId == other.empId
+
+    def __hash__(self):  # integer value --> for bucket indexes
+        return self.empId
+
+
+# set properties --> duplicates not allowed -Unique Elements
+# --> single NoneType
+# --> No Insertion Seq
+# -->mutable
+# ds --> Hashtable  --> indexing -> buckets
+
+
+setOfvalues = {10, 10}  # duplicate ?? --> yes ?? -- {10}
+
+e1 = Emp(101, "AAAA", 333.3)  # Yes      yes      yes         id-->Yes
+e2 = Emp(101, "BBBB", 333.3)  # Yes      yes      yes               Yes
+
+print(e1 == e2)  # fasle --> no eq --> means coming frm object clss--> ref checks --> which is false
+# fail
+
+# class ---> hashtable place --> set/dict --> make sure--> hash and eq --> on same property -->
+# set/dict--> will not work properly
+# set = int --> str -- --> hash/eq --> override
+#          10 10        AA          e1 e2 [dev]--*
+
+sys.exit(0)  # s1        s2           s3         s4          s5
+#      object          hash eq      hash eq     hash eq     hash eq     hash eq
+#      emp              -   -       *     -      -  *       *     *      *   *
+#        id    nm     id  id
+
+# s1 --> index -->  memory address
+# s2 ---> user defined property vr
+# s3 -->  memory address
+# s4/s5 --> user defined property
+# end user- -> duplicate ??? --> set -- 1 --> 2
+# e1 - 1/a---> mem --> 111
+# e2 - 1/a --> mem --> 122
+
+# s1
+# 0
+# 1 e1  e2
+# 2
+
+
+# fail --> expected 1--->actual 2
+# hash-->id  -->eq --> ref ??
+# e1 - 1/a---> mem --> 1
+# e2 - 1/a --> mem --> 1
+
+# s2
+# 0
+# 1 e1  e2
+# 2
+
+
+# eq -->  name  --> fail **
+# e1 - 1/a---> mem --> 12771 --> 1
+# e2 - 1/a --> mem --> 12881 --> 2
+
+# s3
+# 0
+# 1 e1  e2
+# 2
+
+
+# hash --> id        eq --name       --> 1 --> fail
+# e1 - 1/a---> 1
+# e2 - 1/a --> 1
+
+# e2 - 2/a--->
+# 1 --> 1 or 2
+
+# s4
+# 0
+# 1 e1  e2
+# 2
+
+# id   id
+# override --> hash and eq --> same property --> write --> hash/eq --> eq -and hash --> hashtable --> hash-->eq
+# e1 -- 1/a
+# e2--> 2/a
+# expected ?? --> 2
+# s5 --
+# 0
+# 1  e1  e2
+# 2
+
+
+# two diff objects can be equals by content equality -- depends on eq property-->
+# two diff objects pointing same mem --> will always be equal by content equality - True
+
+# 12 55 23          e1          e2          e3
+# 12%5 ---> 2
+
+# e1-1/a          e2-1/a          e3 -2/a
+#   34x             53x             28x                 --> memory address --> hex --> %5 --??? --> index-- number
+# hex --> integer -->
+#   12676           2781            12781               --> hash --?? -> index --?? -->bucket --> hashtable --?? better perfomr--> searching/insertation/deletion
+
+# 12676%5 --1
+
+
+# 0
+
+# 1  e1
+
+# 2  e2
+
+# 3
+
+# 4
+
+
+# e1 -->1/A     e2 --> 1/A
+setValues = {e1, e2}  # no of elements >>> equality --> eq -->
+
+# e1 == e2 --> check eq method inside emp cls -->   present --> check on which property --> value ??
+#   absent --> e1 and e2 cha ref/memory --same or not??
+
+
+setEmps = {e1,
+           e2}  # duplicate ?? --> depends -> who defined this class--> dev--> dev responsible to tel equalitity cr ??
+# user defined --> class --> equalitiy --> class--> eq method ??
+# absent --> object class --> eq --> ref equality --> addresses ?
+# present
+
+# type    props   content     duplicate
+
+
+# how many emp objects --> 2 --> how many ref- ->3
+e1 = Emp(101, "AAA", 2033.3)  # 1x              --> e1 and e3 --> 1x
+e2 = Emp(102, "BBBB", 2433.3)  # 2x             --> e2 --> 2x
+e3 = e1
+# e3 --e1 ---> ref - yes ?? --> content always same --*
+employees = [e1, e2]
+# print(e1) # e1 --> who type--> Emp --> str -check ? --> Yes--> print             No --> parent --> Object--> str --> mem address
+print(employees)  # group of emp types -->
+# type -> employees --> list--> rep --> Emp ???
+
+
+sys.exit(0)
+e3 = e1
+
+print(e1)  # memory address
+print(e2)  # memory address
+print(e3)  # same as e1
+
+'''
+Datatypes -->
+            simple --> number[int,float,complex],str,bool,none
+            complex -> list,set,tuple,dict
+            system/userdefined --> any class --> python ----> user
+                                                 generic -->    as per business requirements
+'''
+
+# --> emp --> No --**
+
+class Emp:
+    def __init__(self,eid,enm):
+        self.empId = eid
+        self.empName = enm
+
+
+e1 = Emp(101,"AA")
+print(type(e1))  #empinfo.emp --> No
+
+#user defined type --> as per business ?? -->
+#list --> same ?
+
+#list --> python -->    u1      u2
+#emp --                 u1      u2
+                     #  Emp     Emp
+
+class Emp:
+
+    def __init__(self,eid,enm,esal):  # this is for intialization purpose--> object properties
+        self.empId  = eid
+        self.empName = enm
+        self.empSal = esal
+
+    def __str__(self): # to represent-to showcase object properties
+        pass
+
+    def __repr__(self): # when u place --> user defined type--> Emp --> into complex--> when group of emps -->
+        pass
+
+#-----
+class Emp:      # memory  1x [templates]--> structure --> instances
+    def __init__(self,eid,enm):
+        self.empId = eid
+        self.empName = enm
+
+e1 = Emp(101,"AA") # 1x --> structure --> 1x
+
+class Emp:   #memory 4x [template] --> structure
+    def __init__(self,eid,enm):
+        self.empId = eid
+        self.empName = enm
+
+e2 = Emp(101,"AA") # 4x --> refer
+e3 = Emp(101,"AA") #4x --> refer
+
+
+print(type(e1))
+print(type(e2))
+print(type(e1)==type(e2))
+
+class A:  # structure
+    pass
+
+a1 = A()  # first
+
+class A:   #structure
+    pass
+
+
+a2 = A()     #second
+
+
+
+list
+
+
+
+
+class Emp:      # memory  1x [templates]--> structure --> instances
+    def __init__(self,eid,enm):
+        self.empId = eid
+        self.empName = enm
+
+e1 = Emp(101,"AA") # 1x --> structure --> 1x
+
+class Emp:   #memory 4x [template] --> structure
+    def __init__(self,eid,enm):
+        self.empId = eid
+        self.empName = enm
+
+e2 = Emp(101,"AA") # 4x --> refer
+e3 = Emp(101,"AA") #4x --> refer
+
+
+print(type(e1))
+print(type(e2))
+print(type(e1)==type(e2))
+
+class A:  # structure
+    pass
+
+a1 = A()  # first
+
+class A:   #structure
+    pass
+
+
+a2 = A()     #second
+
+
+
+list
+
+
+

@@ -1,0 +1,158 @@
+
+-->Python Datatypes--> generic --> developer requirements
+			Simple	-- numbers[int,float,complex],str,boolean,nonetype
+			Complex --> List --> 	Array	--> mutable--> index based --methods
+						Set -->		Hashtable --> mutable->looping--> methods
+						Tuple-->    Array --> immutable-->only read opeartion--methods
+						Dict -->	Hashtable + DLL--> mutable--> key based --> methods
+	
+
+
+Bank -- Student -- Laptop--> developer *--> as per thr requirements
+
+--> Project/Application --> College-->
+									
+							Dept					list -- []				num - 10
+							Student
+							Prof
+							Books
+							Author
+							Courses
+							and so on
+							explicit			implicit			implict
+				d1			Dept*				list*				num*
+				d2			Dept*				list*				num*
+
+						datatype --> properties
+									 values
+							
+	We need to defined own datatype--? developer -->
+					dept --> [id,name,code]					dept --> [deptid,deptname,deptcode]
+					stud --> [id,name,age,email,marks]
+					prof --> [id,name,expr,skills]
+					books --->[id,name,publ,author]
+					
+					
+definations-> class --> collection of variable/methods--> structure --> template
+
+		---> class is a user defined/system defined[python]--> structure--> 
+		
+					user defined --> as per thr own business
+					system defined --> generic
+					
+			generic --> simple + complex ---> structure point--> fixed--> overall		--> fixed--> fixed type
+			developer--->dept ---->		--> structure point --> dynamic-> business		--> as per thr requirements
+			
+			
+			extensible-->
+			
+						
+			fixed + dynamic
+			
+-------------->
+
+class  --> user defined structures--?
+				to define own datatypes -->
+						to hold business requirements
+							
+class = variable/methods --> properties + behivours
+objects --> actual memory location --> instnace--> datatype-->
+
+
+class ABC:
+	def init	-	--> obj properties init --> obj creation
+	
+	
+	def str			--> obj representation --> implicit --> ref print
+	
+
+
+
+
+
+positional -->
+			name  --> No
+			position --> Yes
+			no of param--> Yes
+
+named params
+			name --> yes
+			position --> No
+			no of params--> Yes
+			
+			
+default --> optional
+			--> shud start from right to left-->
+			--> shud be from last
+		positional --> rules positional
+		named -- names rules
+		
+		
+			
+Types of params --> 	
+			Positional
+			Named
+			Default
+
+String formatting ways-->
+			using format --> positional --> seq and no of params
+						 --> names --> no of params-- seq does matter
+						 --> index --> param index matters--> started from zero
+			using f 	--->direct --> after 3.6 python version supported
+						 
+						 
+class
+	init	--> python provided	--> obj ini--> 	no init--> no same props for all object
+	str		--> python provided	--> display/showcase --> str-> memory address--> 
+	repr	--> python provided	--> group of object repr--> group obj--> memory addresses
+	
+	
+self --> current object/instance--currnet memory
+
+
+
+varX = 10
+
+def f1(x):
+    p = x
+    #will use/process p
+    
+f1(10)
+
+def function_v1(self=192): #function -- outside the class - FUNCTION
+    varP= 20
+    print(type(self)) # int string
+function_v1(10)
+function_v1("A")
+function_v1() #error- -> required one param
+function_v1(1933)
+function_v1(self=128)
+
+class Address:
+
+    varY=20
+    #self is implicit params-- which points to current obj ref/mem--> Address type
+    def m1(self):  #METHOD ->SELF
+        print(type(self))
+
+    def __init__(self,v1,v2,v3):
+        self.var1 = v1
+        self.var2 = v2
+        self.var3 = v3
+
+    def __str__(self):
+        return f'''
+            Var1 : {self.var1}    
+            Var2 : {self.var2}
+            Var3 : {self.var3}    
+            '''
+
+    def __repr__(self):
+        return str(self)
+
+ad1 = Address()
+ad1.m1()
+ad2 = Address()
+ad2.m1()
+
+

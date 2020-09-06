@@ -1,0 +1,66 @@
+A(ABC)
+
+    @
+    m1()    --> abstract no body    ---> A dont have m1
+
+
+
+B(A)
+
+    m1()    --> must    --> B       -   --> B
+
+
+    m1():   --> always this one-->  latest-->B --> call --> latest
+
+
+
+
+class A(ABC)
+    @abc
+    def m1()
+    pass
+
+    @abc
+    def m2()        #abstract method --> contract --> child needs to provide implementation
+    pass
+
+class B(A):     ---> python wont allow to create instance of B--> till the time all services implement nh krt
+
+    def m1():           dummy method --> no implementatin
+     pass
+
+    def m2():
+     pass
+
+class C(B) :
+
+
+
+
+class StudentService(ABC) -->  methods without body
+
+    @abstractmethod
+    def add_student(self):      # method implementations--> must-- whoever is child
+        pass                      #override -->implement --> child --> method same -->
+
+
+class StudentServiceImpl(StudentService):
+
+       def add_student(self):      # method implementations--> must-- whoever is child
+         pass
+
+
+
+class RBI(ABC):                                 class SBI(RBI)                              class HDFC(RBI)
+    @abstractmethod
+    def deposit_amount():                           def deposit_amount():                   class deposit_amount1():
+       pass                                                   Sbi will decide                           HDFC wi
+    @abstractmethod
+    def withdraw_amount():
+      pass
+    @abstractmethod
+    def atm_service():
+        pass
+    @abstractmethod
+    def net_banking():
+        pass

@@ -1,0 +1,214 @@
+
+Simple Types--> single element
+	
+	Number
+			int			num = 10
+			float		num = 12872.34
+			complex		num =1278712+2j		1278712+2J
+	string 	''			val = 'abc'
+			""			val = "pqrs"
+			''''''		val = '''xxxx'''
+			"""	"""		val = """yyy"""
+	boolean  True/False	flag = True		flag = False
+	None  -- 			val =None
+
+Complex Types --> 
+		single entity as a group of elements -
+		hom + hetro
+				  empty		with value					empty
+
+			list	[]	[10,20,30,"a","B",None]			list()
+			tuple	()	(10,20,30,"a","22")				tuple()	
+			set		--	{10,2,3,341,231,"A","Y"}		set()
+			dict	{}	{1:100,"b":"bat",2882:"XXX"}	dict()
+		
+	
+Exceptional cases	
+p1	
+	val = 10,20	---> Tuple type  
+p2	
+	val = (10)		--> int	--> syntax contradactory - with --> int
+	val = (10,)		--> tuple
+p3
+	val1,val2,val3 = 10,20,"A"	--> 3 vars -- 2 int type,1 str type
+p4									assigs valus---respctively
+	packing -- pickling
+	val1 = 10,20,30		
+p5
+	unpack -- unpickling
+	val1,val2,val3 = 10,'',30		-- will not work--error	
+	
+
+#empty for complex types
+val = []            # allocation of memory -- and all properties will be accesible
+val = list()
+
+val.append(10)
+
+val = {}
+val = dict()
+
+val = ()
+val= tuple()
+
+val = set()
+val.add(102)
+	
+			
+every complex types having the diff properties
+		-->list --[]	--> ARRAY
+				**	--> hom + hetro [dev]--> object type --> hom
+					--> allows duplicates elements --
+					 --> insertation seq is maintained--
+					 --> multiple NoneTypes are allowed
+					 --> index based operations supported
+				**	 --> indexes can be +ve/-ve -->
+								before-- given to array
+									minus indexes will be converted
+									into +ve --> len - given minus index
+					 --> internally -- uses array DS -- data structure
+				**	 --> dynamical grows/shrink up - runtime
+				**	 --> can perform -- add/remove/append/insert/replace -- operations
+			Array --> data structure -- 
+					contigeous memory allocation
+					fixed in size
+					cannot grow/shrink dynamically
+					index based operations
+					index -- always positive -- 0 to len-1
+					homegeous --> similar type 
+						
+
+variable --> memory location which holds value
+datatype --> type of data which we hold on memory
+data structure --> way of organizing/manipulating/storing/retrive--> 
+way of organizing/manipulating/storing/retrive--> datastruture	
+	stack --> first in last out -- last in first out--> any elements-> which type ?
+														operate 
+	queue --> first come first serve
+				
+	linkedlist --> nodes-- one after another
+			
+
+
+capacity -- no of element we can hold 
+len/size --> actual elements
+
+list	10,20				size/len-2		--> capacity-->cannot say--dynamical
+		array --capacity/len/size --> same
+			[10	20	0	0	0]
+
+100--> list-->array
+
+list -- array  10
+
+100	--> array no times grow --> 100 place ?
+
+100---> list-- internally ?
+
+
+	10:1	--->11:2	---> 16:3---->23:4	---> 34:5 ---> 50:6-->100+:7	----------->7 times
+	10			15			 22			33		  49		73
+	
+
+list is not a better choice -- for --insertion and deletion operations  -- frequent
+list --> whenever there are searching/retrival --> 1 operation --1
+
+array -- at once -- memoery -- contigeous location-- indexes
+	
+10-->15 --22 -- 33 ---49  -------------list capacity-- cannot say-->as long as mem--grow
+   5	7	  11	16		
+				
+				
+Array		
+	class -->  male type --> 
+							only male candiates are allowed -- similar type
+							
+			 female type -- 
+							only female candiates are allowed
+							
+			person -->
+						male/famale			-- similar type
+						
+						
+		
+		object --> int/float/str/boolean/none/complex objects
+				everything is in python object
+				python -- object orieneted
+				
+	list = [10,20,"A",[],100,{10},True,None]
+	
+	
+	
+	hetrogenous ---> reverse -- works
+	hetrogenous	-- sort -->	not implicitly-- explicitly
+	
+	
+	ASCII --> 
+	
+	number
+		0	-	9		A	- Z			a	 z   space
+		48		57		65	  90		97	122	  32
+		
+		
+ASCII Table -->
+
+import sys
+
+values = ["A","X","x","4","t"] #max -- index --> 4 -- len--5
+print(values)
+values.sort() #asc -- reverse -True- desc
+print(values) #10 20 50 130 404
+
+#
+
+
+sys.exit(0)
+#values.reverse() # way of insertion -- opp---> 50 404 130 20 10
+#print(values)
+
+
+sys.exit(0)
+values.insert(50,"AAAA")# -4 --> 4 ---> 4>=5 -->    5-4 -->1 --> index 1
+print(values)
+
+#values.insert(2,"AAAA") #10 20 "AAAA" 30 40 50 --> insert --> position
+#values.insert(15,"BBBB")#like append --> index >= len -- append --last append
+values.insert(5,"XXX")#xxx 10 20 30 40 50--> index in minus--> 5-6-->-1
+                # +ve --> append
+                # --ve - first position insert
+                #other cases--> index position
+                                                   #index --> +ve --> index>=len --> append
+                                                   #index --> -ve -- (+ve) -- index>=len -- first position--zeroth
+                                                    #index -- 0 --first
+sys.exit(0)
+values.append(100) # len+1 --> add at last --> 5th position --last
+values.append(30)           #6th --> 7--6
+print("Length",len(values))  #len -7 -- max -- index 6
+print('Actual Elements - ',values)
+print(values[6]) #6 --> 30 # read--search--fetch
+print(values[-1]) #7-1-->6 -->30#read-search--fetch
+
+sys.exit(0) # to stop execution here
+
+
+
+
+val = [None]*1000
+
+
+#print(len(val))
+print(val)
+
+
+#array -> universal --> for all lang --> 0 -> len-1
+#python lang  list properties --> +ve/-ve
+
+val = [10,20]
+val.append(30) # will add one more element --at last -->
+
+
+#value = [1,2,3,4,5,6,7,8,9,10]  #len -> 10      max index --> 9 -- min index- 0
+                  #10 -- +ve boundry crosses -- 9
+#print(value[-10]) #6 --> before index-- array -->       10 -11 --> -1
+                        #ar[-1] --> -- fail
+
