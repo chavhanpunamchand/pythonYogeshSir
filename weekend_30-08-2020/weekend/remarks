@@ -62,5 +62,6 @@ class RBI(ABC):                                 class SBI(RBI)                  
     def atm_service():
         pass
     @abstractmethod
-    def net_banking():
+    def n
+    et_banking():
         pass
