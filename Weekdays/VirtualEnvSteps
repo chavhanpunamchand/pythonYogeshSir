@@ -1,0 +1,167 @@
+
+	
+	
+	--> MANF --???	-->	KARU --> NOT GOING TO DO THAT-->
+	
+	CLOTHS	-->		IMPORT		--> DEVELOP ????
+	SOAPS			--> IMPORT
+	HOUSEHOLD ITEMS	--> IMPORT
+	
+	
+	
+	
+	PYTHON --> READ/WRITE--EXCEL	--> IMPORT THAT LIB---> PERFORM UR OPERATIONS..
+	
+	
+	python --> interpretter
+	pip ---> to install 3rd party libs-->
+	
+	>pip install virtualenv				--> this lib is required to create virtual envs
+	
+	virtual env ??
+								env?? lib1/lib4
+								read.write				database
+	Project1 ---> c:\users		lib1					lib5					--> env1	--> lib1 		lib5
+	Project2 --> c:\users		lib4											--> env2	--> lib4		lib5
+	Project3 --> c:\users														--> env3	--> lib2		lib2
+	
+				env --?		lib1 ??
+							lib2??
+							
+			operation system --> microsoft office-- 2007/2010	--? ???
+			c:users--> interpretter --> lib1--> lib4		--> ekach function -> 2 libs ??? -- problem ??
+								excel 1.3		excel 1.6	---	????
+								
+								
+								
+3rd party libs will be installed inside 
+	C:\Users\Yogesh\AppData\Local\Programs\Python\Python37-32\Lib\site-packages		--> Global--> which will be avaiable for all projects by default-->
+	
+	we shud create  seperate env for every project--> and install project specific libs in that env
+	but not inside -- global env-->
+	
+	command prompt --->
+	
+						python --version
+						pip --version					# we are using --global pip --> so virtualenv 3rd party lib will be installed inside global env
+						pip install virtualenv		--??? where this lib will be installed ??
+						
+			--> global env---> C:\Users\Yogesh\AppData\Local\Programs\Python\Python37-32\Lib\site-packages
+						python  ---> interpretter
+						pip  ---> to install 3rd party libs
+						virtualenv		--> to create virtual env-->
+						
+						
+	
+	
+	
+	
+	global --> c:users										--> python.exe	--> sitepackages--
+	
+	venv --- virtualenv --> basic libs inherited from global env --> 	python.exe --> sitepackages-->
+	
+	
+	python --version
+	pip --version
+	virtualenv --version
+	
+	pip install virtualenv
+	virtualenv venv
+	
+	
+	
+
+
+
+
+	either pycharm
+		   command prompt
+		   
+		  -->laptop --> os ??
+				--> command prompt ->
+				
+				gui --> internally --- > command --> ch ahe
+				
+				click --> command --> 
+				
+				pycharm --> xyz --> internally -- command
+				command -->
+	
+	check version	-->
+			>python --version
+			>pip 	--version
+			>pip install virtualenv
+			--> select ur directory
+			E:
+			cd pywrkspace\p11code	-->
+			
+			E:pywrkspace\p11code>	virtualenv myenv
+			E:pywrkspace\p11code>	myenv\Scripts\activate
+			(myenv)-->		this pointing is in -- virtual env-->
+			
+			(myenv)	-->sitepackages--> virtual
+			
+			
+			
+			C: pip install	--> global env---> avoid this- -> 
+			
+			
+			virtual env -->collection of project specific libs along with strict version.
+			
+	p1	--> venv1	--> p1-pycharm --venv1	--> pymysql 2.4		--> 
+	p2	--> venv2	--> p2 pycharm -->venv2	-->	pymysql 1.4		
+	p3	--> venv3	--> p3 pycharm--> venv3	--> openpyxl 3.7		
+	
+	
+	
+	openpy - lib -- project--> xyz person --> libs ???		--> transitive dependency
+	
+	
+	-- If we need A dependency --> internally A requires b and b requires c 1.5
+	-->A -> b and c1.5 --> -->
+	
+	pip --> not only just lib--> resolves transitive dependencies
+	
+	
+---------------steps ------------
+
+	
+	database --> excelsheet -->
+
+
+	python --version
+	pip --version
+	pip install virtualenv
+	
+	>change directory wherever u want u virtualenv for ur project
+	
+	virtualenv envenv
+	envenv\Scripts\activate
+   (envenv)>
+	
+	pip install libname					--> install whatever latest in repository
+	pip install libname==version		--> strictly install specific version
+	
+	
+	pip list			--> show case all installed libs	--> wherever pip is referring to
+	pip freeze			--> show case only 3rd party and there dependent libs --> wherever pip is referring to
+	pip freeze >requirements.txt		--> redirect output to requirements.txt file --along with specific lib versions
+	
+	pip uninstall libname		--> uninstall only that lib-- not dependent libs
+	pip uninstall libname==version-- uninstall specific lib version
+	
+	
+					[refer specific path]
+	pip install -r requirements.txt			--> refer lib and specific version from lib and install-- wherever pip is referring to
+
+
+--> global -->n libs -->
+
+	> pip freeze >req.txt	-->			global libs--> write inside req.txt 
+																	open kel --> virtualenv remove
+										req.txt -- all except -- virtualenv
+	>pip uninstall -r req.txt			--> refer-- req.txt -> one by one remove --> 
+
+
+
+	>> deactivate -	-		> left  current env -- 
