@@ -1,0 +1,25 @@
+                           BaseException        --> python provided..
+
+        A           B           C               D
+
+
+       X            Y             Z             P
+
+
+              R                        S
+
+
+
+
+
+          A -->X -->R                   try
+          B -->Y--> R                           l1 .. l2... l3
+          C --> Z-->S                   except
+          D -->p -->S
+                                        except
+
+                                        except
+
+                                        else
+
+                                        finally

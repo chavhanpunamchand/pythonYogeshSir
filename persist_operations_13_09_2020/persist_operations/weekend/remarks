@@ -1,0 +1,50 @@
+Virtual env -->  its specific memory -- area --> on hard --> on which --> we have project specific
+                dependencies -> bcoz --> every project dependencies are diff--> even if
+                lib same -- versions are diff--> in order to avoid those--> project dependencies
+                or version depencencies we need to create env --> specific to projects..
+
+
+Python --> Project Interpretter --> PYTHON_HOME -->         PATH -->%PYTHON_HOME%
+            --> Convert  python code into machine code
+
+pip -->      %PYTHON_HOME%\Scripts   -->
+            --> pip stands for python installs packages.
+            --> libs --> this lib is used for installation --> 3rd party libs-->
+            --> libs --> collection of python file/modules -->
+                    --> 3rd party libs --> pdf -- excel -- database --> libs
+                 --> pip --???
+        c
+
+
+Virtual Env -->
+
+        Every project dependent on libs -->  True
+        libs ? --> collection of files --> developed for specific purpose
+
+Windows --> x --> virtual env -->  project specific env -->
+                                        eka dependencies dusraya project conflict --> no..
+
+  Project 1 -->  x 1.0,  p     -->
+  Project 2  --> x 0.8, y , z
+  Project 3  --> a,b,c
+
+
+
+    Webapp --> irctc -->             are u going to write this no-->you are going to use that lib-> which can create pdf code --> object as input
+                            ticket --> pdf -- html -->
+                            doc --> any lib --> doc file write karu shkte
+                            image --> lib -->
+                            database -> any lib
+
+                            laptop  --> No -->
+                                                comps --> import-->
+
+                                                                another comps --> imports
+                                                                                            --> raw material
+                            tv      ==>
+                            fridge -->
+
+
+How we can save data object format -->
+    inside --> File --> Database --> Json --> CSV -- Excel
+Exception Handling

@@ -1,0 +1,33 @@
+
+why virtual envs-->
+        we work on diff projects--> every project dependencies are diff.. even versions
+        --> project specific dependencis -- maintain- -> seperate env--> virtual env
+        --> proj1 --< dependencies--< !conflict--> another project..
+
+   open command prompt -->
+        --> python --version
+        --> pip --version
+
+        --> pip install virtualenv
+        --> mkdir pywork                                    create directory -->
+        --> cd pywork
+        --> virutalenv venv
+        --> venv\Scripts\activate
+
+        (venv) pip install pymysql
+        (venv) pip install openpyxl
+        --> open pycharm -->
+        --> file settings project interpretter --> point out to venv\Scripts\python.exe
+        --> apply these settiings for ur project
+
+        --> env --> libs --> as its another developer -->
+        --> pip freeze  --> only 3rd party ---> not implicit one-- or python provided..
+        --> pip list  --> all installed libs
+
+        --> (venv)pip freeze >req.txt
+
+
+        --> another developer-->
+                --> will create env and activate-->
+                (xxx)> pip install -r requirement.txt
+
