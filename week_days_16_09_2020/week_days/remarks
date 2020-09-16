@@ -1,0 +1,253 @@
+CREATE TABLE PRODUCT_INFO(
+   ID INT PRIMARY KEY     NOT NULL,
+   PROD_NAME           TEXT    NOT NULL,
+   PROD_QTY            INT     NOT NULL,
+   PROD_CODE        CHAR(50),
+   PROD_PRICE         REAL
+);
+
+
+
+sql --> database--> names--> columns -->
+
+new record insert--> create
+insert into product_info values(101,'XXXX',2,'XXXX',2828.34)
+
+
+fetch --> read
+select * from
+		# all products
+select * from product_info where pid>29
+select * from product_info prod_price >=28823.45
+
+
+#update -->
+
+update product_info set prod_name='AAAA',prod_qty = 22,prod_price=2883.34,prod_code='XXX' where
+		id=101
+
+
+delete
+
+delete from product_info where id=191
+
+
+CRUD -->
+
+
+
+download sqlite3 software and -- extract that zip and set path inside system env
+variables-->
+
+path -->
+		C:\Users\Yogesh\Downloads\sqlite-dll-win64-x64-3270200
+
+
+
+
+[
+	{
+		"prodId": 101,
+		"prodName": "AAAA0",
+		"prodPrice": 2929.34,
+		"prodQty": 27,
+		"prodCode": "A0XXX"
+	},
+	{
+		"prodId": 102,
+		"prodName": "AAAA1",
+		"prodPrice": 2930.34,
+		"prodQty": 28,
+		"prodCode": "A1XXX"
+	},
+	{
+		"prodId": 103,
+		"prodName": "AAAA2",
+		"prodPrice": 2931.34,
+		"prodQty": 29,
+		"prodCode": "A2XXX"
+	},
+	{
+		"prodId": 104,
+		"prodName": "AAAA3",
+		"prodPrice": 2932.34,
+		"prodQty": 30,
+		"prodCode": "A3XXX"
+	},
+	{
+		"prodId": 105,
+		"prodName": "AAAA4",
+		"prodPrice": 2933.34,
+		"prodQty": 31,
+		"prodCode": "A4XXX"
+	},
+	{
+		"prodId": 106,
+		"prodName": "AAAA5",
+		"prodPrice": 2934.34,
+		"prodQty": 32,
+		"prodCode": "A5XXX"
+	},
+	{
+		"prodId": 107,
+		"prodName": "AAAA6",
+		"prodPrice": 2935.34,
+		"prodQty": 33,
+		"prodCode": "A6XXX"
+	},
+	{
+		"prodId": 108,
+		"prodName": "AAAA7",
+		"prodPrice": 2936.34,
+		"prodQty": 34,
+		"prodCode": "A7XXX"
+	},
+	{
+		"prodId": 109,
+		"prodName": "AAAA8",
+		"prodPrice": 2937.34,
+		"prodQty": 35,
+		"prodCode": "A8XXX"
+	},
+	{
+		"prodId": 110,
+		"prodName": "AAAA9",
+		"prodPrice": 2938.34,
+		"prodQty": 36,
+		"prodCode": "A9XXX"
+	}
+]
+
+
+
+
+		python interpretter							compiler/-->
+		python	---------------------------------> java/dotnet/php
+						-------------------------->
+
+		Person(101,"AAA",29,"abc@gmail")
+					------------------------------------>
+		python object contents --> file [searching slow/insertation/deletation --slow]
+								   excel --> entire file load -> sheet--> sheet['C45']-->
+								   json --> javascript object notation..
+
+									 101 AAA 29 abc@gmail.com
+
+									103 --> entire load--> 103 --> searching
+									load python object--> list remove--> rewrite-->
+
+
+		json object -->		{
+								"id" : 101,
+								"name" : "AAAA",
+								"age" : 29,
+								"email" : "abc@gmail.com"
+							}
+
+
+		python dict --> key types--> anything which hashable ** --> hash--> hashcode-->index
+						values --> anytype
+
+		json --> keys --> String
+				values --> number,string,collection
+
+		json object - {}	--> key: value	---> key-->string	--> value-->string/number/collection
+		collection --> group of json objects --> []
+
+
+		emp	json 			--> empjson.get("address")	--> list of addresses-
+							--> emojson.get("address")[1].get("city")	--> mumbai
+								json --> kind of query -->
+								dict -->
+								json --> can be dict but vice versa is not true always..
+
+
+			empjson = {
+				"id" : 101,
+				"name": "AAAA",
+				"sal" : 1192.23
+				"address" : [
+								{"city":"Pune","pin":1011},{"city":"Mumbai","pin":11}
+							]
+			}
+
+
+
+
+
+
+
+
+	-->Excel ---> Files -->
+
+
+--> JSON -->  Database -->
+
+
+
+	lang -->
+				number	-->
+				string	-->
+				collection
+
+		json -->
+
+
+		class  Person			Person(101,AAA,20,abd@gmail,com)	-->			java same --??
+				init
+				 id
+				 nm
+				 age
+				 email
+
+	datatypes -->
+			float -->		float double
+			int			int
+			string			string char
+
+
+
+
+
+	--> machine specific-->
+
+			developement --> same softwares--> almost -->
+
+					configuration -- same -->
+
+		Support -> team -->
+
+					softwares- version -> support
+
+SDLC -->
+		Requirement Gathering
+		Design
+			HLD -->		softwares configurations -->	 softwares teams size-> bud- durations--
+			LLD --> 	Low Level Design		--> which class-- tables--> columns=-- abstract methods
+
+			SRS --> Software requirement specification document
+
+			Virtualenvs --> project env-->
+
+ticket -->
+					ms office -->
+					pycharm -->
+
+#-->
+
+string methods->
+database crud queries--
+        create table
+        insert into
+        update
+        delete
+        select
+
+database-->
+
+delete      --> prompt -- yes/no
+
+#--> database --> installation -->
+#postgres -- download-->
+#mysql  --> software --> write/read-- data
+#sqlite3 --> for view purpose--
