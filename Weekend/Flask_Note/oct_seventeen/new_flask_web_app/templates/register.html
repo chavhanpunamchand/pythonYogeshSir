@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <center><h3>Emp Registration </h3></center>
+
+
+	{% if errors %}
+	{% for key,value in errors.items() %}
+		<font color="red">
+		{{value}} <br>
+		</font>
+	{% endfor %}
+	{% endif %}
+
+	<font color="green">
+	{{resp}}
+		</font>
+	<br><br>
+    <form action="/signup" method="post">
+
+
+			Emp Id : <input type="text" name="empid" id="eid" value="{%if data.get('empid') %}{{data.get('empid')}}{%endif %}"> <br><br>
+			Emp Name : <input type="text" name="empname" id="ename" value="{%if data.get('empname') %}{{data.get('empname')}}{%endif %}"> <br><br>
+			Emp Age : <input type="text" name="empage" id="eage" value="{%if data.get('empage') %}{{data.get('empage')}}{%endif %}"> <br><br>
+
+
+
+
+
+
+			Emp Gender : <input type="radio" name="empgen" id="egen1"  value="M"  {%if data.get('empgen')=='M' %} checked {% endif %}> Male
+						 <input type="radio" name="empgen" id="egen2" value="F" {%if data.get('empgen')=='F' %} checked {% endif %}> Female <br><br>
+
+
+			Emp City : <input type="text" name="ecity" id="ecity" value="{%if data.get('ecity') %}{{data.get('ecity')}}{%endif %}"> <br><br>
+			Emp Salary : <input type="text" name="empsal" id="esal" value="{%if data.get('empsal') %}{{data.get('empsal')}}{%endif %}"> <br><br>
+			Emp Email : <input type="text" name="empemail" id="eemail" value="{%if data.get('empemail') %}{{data.get('empemail')}}{%endif %}"> <br><br>
+			Emp Role : 	<select name="emprole" id="erole">
+
+								<option value="M101" {% if data.get('emprole') == 'M101' %} selected {% endif %}>Manager1</option>
+								<option value="M102" {% if data.get('emprole') == 'M102' %} selected {% endif %}>Manager2</option>
+								<option value="M103" {% if data.get('emprole') == 'M103' %} selected {% endif %}>Manager3</option>
+								<option value="M104" {% if data.get('emprole') == 'M104' %} selected {% endif %}>Manager4</option>
+								<option value="M105" {% if data.get('emprole') == 'M105' %} selected {% endif %}>Manager5</option>
+						</select><br><br>
+			Emp Skills : <select name="empskills" id="eskill" multiple>
+									{% if data.get('empskills') %}
+								<option value="S101" {% if 'S101' in data.getlist('empskills') %} selected	{% endif %}>Skill..1 </option>
+								<option value="S102" {% if 'S102' in data.getlist('empskills') %} selected	{% endif %}>Skill..2</option>
+								<option value="S103" {% if 'S103' in data.getlist('empskills') %} selected	{% endif %}>Skill..3</option>
+								<option value="S104" {% if 'S104' in data.getlist('empskills') %} selected	{% endif %}>Skill..4</option>
+								<option value="S105" {% if 'S105' in data.getlist('empskills') %} selected	{% endif %}>Skill..5</option>
+								{% else %}
+
+								<option value="S101">Skill..1 </option>
+								<option value="S102">Skill..2</option>
+								<option value="S103">Skill..3</option>
+								<option value="S104">Skill..4</option>
+								<option value="S105">Skill..5</option>
+
+								{% endif %}
+						</select>
+						<br><br>
+			Emp Hobbies :
+
+				{% if data.get('emphob') %}
+				<input type="checkbox" name="emphob" id="ehb1" value="CR1" {% if 'CR1' in data.getlist('emphob') %} checked	{% endif %}> Cricket1
+				<input type="checkbox" name="emphob" id="ehb2" value="CR2" {% if 'CR2' in data.getlist('emphob') %} checked	{% endif %}>Cricket2
+				<input type="checkbox" name="emphob" id="ehb3" value="CR3" {% if 'CR3' in data.getlist('emphob') %} checked	{% endif %}>Cricket3
+				<input type="checkbox" name="emphob" id="ehb4" value="CR4" {% if 'CR4' in data.getlist('emphob') %} checked	{% endif %}> Cricket4
+				<input type="checkbox" name="emphob" id="ehb5" value="CR5" {% if 'CR5' in data.getlist('emphob') %} checked	{% endif %}> Cricket5
+				<input type="checkbox" name="emphob" id="ehb6" value="CR6" {% if 'CR6' in data.getlist('emphob') %} checked	{% endif %}>Cricket6
+				{% else %}
+				<input type="checkbox" name="emphob" id="ehb1" value="CR1" > Cricket1
+				<input type="checkbox" name="emphob" id="ehb2" value="CR2" >Cricket2
+				<input type="checkbox" name="emphob" id="ehb3" value="CR3" >Cricket3
+				<input type="checkbox" name="emphob" id="ehb4" value="CR4" > Cricket4
+				<input type="checkbox" name="emphob" id="ehb5" value="CR5" > Cricket5
+				<input type="checkbox" name="emphob" id="ehb6" value="CR6" >Cricket6
+				{% endif %}
+				<br><br>
+
+	<input type="submit" value="save" name="save">
+    </form>
+
+	<table border="1">
+			<thead>
+				<th>EMPID</th>	<th>EMPNAME</th>	<th>EMAIL</th>
+			</thead>
+			<tbody>
+				 {% for emp in emps %}
+					<tr>
+							<td>{{emp.empId}}</td>
+							<td>{{emp.empName}}</td>
+							<td>{{emp.empEmail}}</td>
+					</tr>
+				 {% endfor %}
+
+			</tbody>
+	</table>
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+
+	HTTP methods Request Types-->
+
+					GET
+							ADDRESS BAR --> GET
+					HYPERLINK	LINKS 		--> GET
+							BUTTON		--> ACTION--> ASSOCIATED-- METHOD TYPE--> GET/POST
+							form -- implicit method type --> GET
+
+					POST
+						FORM --> EXPLICIT METHOD -- post
+
+
+GET
+	http://localhost:5000/hello/101					--> pathvariable --> link	--> <int:eid> <str:val> <float:esal>
+	http://localhost:5000/emp/save/?val=Yogesh		--> query param--> form with get type --> using request.args
+
+POST	--> explicit method type for form
+	http://localhost:5000/emp/save/			--> data not visiable inside url -> but data will be inside request body.
+
+
+browser thru --> only two types request =>
+			GET--> address url --> form no method [default get]--explicitly form madhe get-->
+				hyperlink --> get
+
+						pathvariable--> data directly url madhe without names
+
+						<int:>	<str:>	<float:>
+
+						queryparam --> form type type-get --> every value has name-->
+			/emp/save/?empid=101&empname=Yogesh&empage=33&empgen=M&ecity=Pune&empsal=222.33&empemail=abc%40gmail.com&emprole=M103&
+			empskills=S102&empskills=S103
+
+			&emphob=CR1&emphob=CR3&emphob=CR6
+
+			request.args --> immutabledict -->
+
+			val = request.args		--> dict.get()			--> dict.getlist() --> multichoice dropdown-- checkbox
+			val.get('empid')--> 101
+			val.get('empname')-->Yogesh
+			val.get('empid')--> 101
+			list1 = val.getlist('empskills')	--> [s102,s103]
+			list2 = val.getlist('empshob')	--> [cr1,c2,c6]
+
+
+
+
+
+			POST --> form --> explicit method -- > type -- post
+			val = request.form		--> dict.get()			--> dict.getlist() --> multichoice dropdown-- checkbox
+			val.get('empid')--> 101
+			val.get('empname')-->Yogesh
+			val.get('empid')--> 101
+			list1 = val.getlist('empskills')	--> [s102,s103]
+			list2 = val.getlist('empshob')	--> [cr1,c2,c6]
+
+
+
+
+
+					get -->					post
+data				in url					inside request body
+secure				no						yes								--> post secure
+limit				yes						no
+					2kb
+type				addressbar				form-explicit
+					link
+					form-default
+safe				yes						no								--> get --safe
+
+
+net -->  get post ==>
+
+	get data --> url --> not secure -->		read
+			dev-- get method use karel - ka ---server la data send karayla ?? --> NO --> no impact on db
+			get -- method --> server kadn data fetch karnyasathi--> fetch/fetchall -->
+
+	post data --> body madhe - secure -- write/update
+			dev --> method data - yes --> data -- server -- process karun save--> yacha impact-- database
+
+
+	get -- not secure -- data visiable inside url
+	post -- secure --> data inside request body
+
+	get -- data fetch -- no impact on db --> safe method
+	post -- data write -- impact on db ---> no safe method
+
+
+
+
+
+	E:\pywrkspce\bankapp\new_flask_web_app -->
+
+
+		browser
+
+		get
+			pathvariable
+				http://localhost:5000/emp/save/yogesh				--> /emp/save/<str:fname>
+					m1(fname)
+				http://localhost:5000/emp/save/yogesh/chame/30		--> /emp/save/<str:fname>/<str:lname>/<int:age>
+					queryparam
+					m1(fname,lname,age)
+
+																			immutabledict
+			http://localhost:5000/emp/save/?name=yogesh				--> /emp/save/				request.args
+				m1()
+					request.args --> dict --> 	get('key')/getlist('key')
+
+
+
+		post
+			http://localhost:5000/emp/save/
+					m1()
+					request.form --> dict --> 	get('key')/getlist('key')
+
+
+
+
+

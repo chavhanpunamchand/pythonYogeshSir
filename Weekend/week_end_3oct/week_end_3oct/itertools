@@ -1,0 +1,150 @@
+
+Collections --> Container -->
+
+        NamedTuple
+        DefaultDict
+        OrderDict
+        Deque
+        Counter
+        ChainedMap
+
+
+
+lambda -> anonymous function
+    --> map     vs starmap  -->
+    --> filter
+    --> reduce
+
+
+
+itertools -->
+        count   -->  infinite --> start --> step -->  step --> integraal --> decimal +/- ---> range sbt -->
+        repeat  --> element --> n times repeat--> infinite time repeat --> will consider it as single element
+        cycle   --> circular iterations -> infinite--n times --> iterable
+
+        accumalate --> (f1,[1,2,3,5,6])     --> 1+2,3+3,6+5,11+6 -> no of elements-> ans [] --> reduce
+        chain       --> logically grouping--> iteration smoothly runs  ---> chainedmap --> tee
+        compress    --> data--selector --> selector will tel to select or not select--> whatever conditions returns true-->
+        dropwhile   --, f1,iterable --> f1--> till first false--> thereafter-elements collect--> all-->
+        filterfalse --> f1,iterbale --> f1--> n times--> for every element,whatever returns false-->
+                        collect them
+        isslice  --> kind list slicing--> except--> list[start:stop:step]--> list itself
+                                                    isslice--> itertools-->
+                lambda [map/filter/reduce]
+        starmap --> complex of complex element processing-->
+        groupby --> based on some categories--> group
+        takewhile  --> opp of -> dropwhile
+        tee     -->   cycle sbt ---> *
+        ziplongest      --> zip
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    for item in range(10):
+        e1 = dummy_employee()
+        print(e1)
+
+
+'''
+import sys
+sys.exit(0)
+
+class Iterartor:
+
+    def __init__(self,cnt = 100):
+        self.cnt = cnt
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        empid = self.cnt + 1
+        #self.cnt = empid --> use/dev--> state preserve-- kr- -->iterator-- stateless
+        return empid
+
+
+
+
+
+
+
+
+
+lambda : print('inside m1')()
+lambda p1: print('inside m2',p1)(1)
+lambda p1,p2: print('inside m3',p1,p2)(10,2)
+
+
+import sys
+sys.exit(0)
+
+
+
+
+
+
+a = lambda : print('inside m1')
+b = lambda p1: print('inside m2',p1)
+c = lambda p1,p2: print('inside m3',p1,p2)
+
+#a --> holds --> fun ref--> a()
+a()
+b(10)
+c(10,20)
+
+import sys
+sys.exit(0)
+
+del a       # it means release ref--from mem-> a becomes eligible for gc
+
+def m1():
+    print("inside m1")
+a = lambda : print('inside m1')
+
+
+def m2(p1):
+    print("inside m1--p1")
+
+b = lambda p1: print('inside m2-p1')
+
+def m3(p1,p2):
+    print("inside m3 --> p1,p2")
+
+c = lambda p1,p2: print('inside m3-p1,p2')
+
+
+a = m1
+b = m2
+c = m3
+
+x  = m1()
+y = m2(10)
+z = m3(10,20)
+'''
+
+
+
+value  = [1....5]               12345
+
+accumalate(lambda x,y : x+y,value)  -- [3,5,8,12,17]    --> intermediate results as wel --> checkpoint
+reduce(lambda x,y : x+y,value)      --> 17              --> final result--> no checkpoints-->
+
+
+
+#str function   -> 50
+#build function - 64
+#itertools --> 10*
+#collections module --> 6-7
+# lambda    -> 3
+
+
+##Counter,ChainMap,namedtuple --> decorators/closures/property/innerfunct/asserts--> multithreading*

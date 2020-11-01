@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    Your Information :      <br><br>
+    <h3>First Approach</h3>
+            EmpId : {{info.get('eid')}} <br><br>
+            EmpName : {{info['enm']}} <br><br>
+            EmpAge :{{info['eag']}}  <br><br>
+            EmpEmail :{{info['eml']}}  <br><br>
+            EmpRole :{{info['erl']}}  <br><br>
+            EmpSalary :{{info['esa']}}  <br><br>
+
+    <h3>Second Approach</h3>
+
+        {% for key,value in info.items() %}
+                {{key}} : {{value}} <br><br>
+        {% endfor %}
+
+    <h3>Second Approach---1</h3><br><br>
+    {{value.get("name")}}   {{value.get("email")}}
+<h3>Second Approach---2</h3><br><br>
+{% for item in value %}
+    {{item}} : {{value.get(item)}}
+{% endfor %}
+    <br><br>
+<h3>Second Approach---2</h3>
+{% for item in value.values() %}
+    {{item}}
+{% endfor %}
+<br><br>
+{% for pair in value.items() %}
+    {{pair}}
+{% endfor %}
+
+<br><br>
+
+</body>
+</html>

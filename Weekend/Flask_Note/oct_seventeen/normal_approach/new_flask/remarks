@@ -1,0 +1,222 @@
+
+					A
+
+			B  		C      D
+
+			   E       F
+
+					I()
+
+
+				I	--> E ---> B ---> F ---> C ---> D -->A --> MRO
+
+
+				C3 --> Lineratization -->
+
+
+
+
+
+[<class '__main__.I'>, <class '__main__.G'>, <class '__main__.E'>, <class '__main__.B'>, <class '__main__.H'>, <class '__main__.F'>, <class '__main__.C'>, <class '__main__.D'>, <class '__main__.A'>, <class 'object'>]
+
+
+					Parent --> kade --> once-->
+
+			MRO --> method resolution order -->
+					q = Q()
+					q.m1()		--->
+
+	Python --> Core	->
+		--> Python Datatypes--> Simple type and Complex Types --> datastructure -- array/linkedlist[s/d]/hashtable/stack/queue
+		--> python own types --> class/datatypes -->
+		--> oops --> class/objects/abstraction/polymorephism/inheritance*/encapsulation
+		--> exeception handling
+		--> advanced concepts -> itertools/collectionsmodules--> iterator/generators/closures/decorators/property-->assert*
+		--> file -- r/w--> persist -> csv/json/excel/databse/ --> persist operation
+		--> eq/hash/str/repr/init/len and on -->
+		--> multithreading --> condition[wait/notify/notifyall]/event[signal]/lock[at a time one]/rlock[lock madhe lock]/barrier[piknic]/semaphore[toll] and so on
+
+
+Basics--> knowledge-->
+		MRO --> inheritance-->	*
+		Inbuild functions*
+		String function*
+Normal Python -->
+
+
+				Python								-->						JAVA
+				MULTIPLE INHERITNACE										MULTIPLE INHERITNACE* --THRU ABSTRACT THRU WORKS
+				CLASS/ABSTRACT THRU
+
+				CLASS A(B,C,D,E)										CLASS A(B,C,D,E)	-> shud not be classes->abstract wale
+				abstract/normal pn
+
+-->
+
+
+	http://www.flipkart.com -->
+
+			url -> converted into ip address --> 	ip address--> dns map karel ->  flipkart site bhetel
+
+
+
+
+
+
+
+
+
+
+
+	--> port ?? -- logical ports --->		65k arnd
+
+	mysql --> 3306
+	postgres -- 5432
+	oracle -- 1521
+	http --> 8080
+	ftp-21/23
+	smtp -- 43
+
+	and so --> 	65k arnd services chalu shkt
+
+
+		flipkart --> machine ?? --> No --> ka nah ?
+		not a desktop application -- web application-->
+
+
+				Desktop									webapplications
+every machine --installation							deploy --> server vr
+				word/pycharm							irctc/travelyaari/flipkart
+
+				desktop				webapp ??
+
+
+														irctc --> desktop
+			user1-->start
+						 program
+							run		--> ticket2	->book	??		--> sync
+			user2-->start
+						program
+							run		--> ticket2	--> book ??		--> sycn
+
+
+
+				user1--
+																		server
+																	sync()
+																		ticket -->
+				user2
+
+
+		internet -->
+
+
+			desktop 				--> webapp --> 		offline -->
+			specific user				all users
+										connect --> internet pahije
+
+				desktop 	- install
+				webapp		-> deploy on server
+
+				https://www.flipkart.com/
+
+				https:	--> security
+				flipkart.com --> machine
+				/		--> url--> to identify --> method --> code--> execute--> hoel
+
+protocal: http
+url --> ip address
+uri --> method -- route
+
+
+				machine -- port --> webserver -- webapp --> url --> method -->
+
+
+
+http://www.flipkart.com-->
+						search engine --> google
+											google --> check ip mapping inside dns -->
+																	ip --> machine --> find -->
+																			http: 8080	--> machine cha port-->
+																								port-->
+
+		Flask --> Django-->>																						mspa
+
+
+
+http://localhost:5000/welcome				--> 		http://nameofmachine:5000/welcome
+											--> 		http://ipaddressofmymachine:5000/welcome
+
+mazya machine cha ip addresss---> ip address ping -->
+
+
+		Ravindra --	hit machine	-->
+http://nameofmachine:5000/welcome					--> 	mazi machine --> server
+
+			client											server
+			request											request understand--response deto-->
+			http://nameofmachine:5000/welcome
+
+
+
+
+
+
+
+
+
+https://www.flipkart.com/
+
+
+
+https:		--> port --> 443
+
+www -- world wide web
+
+flipkart.com		--> commericial domain	--> flipkart ---> ip address --> thru dns
+
+
+
+
+machine : port --> webserver ---> flipkart site- code
+
+	machine:port -- > so webserver --> code --> any lang --> web application
+
+	----------------------->server code -->
+
+
+
+	Jinja --->
+
+
+
+
+
+	python - madhe -- print - console --> kah problem navta
+
+
+
+	request -- browser
+
+							request -- process -- server karel
+										return object -->		object ???
+																jinja template --> generic way-->
+
+
+	response browser
+
+
+
+				{{var}}						var
+
+				{% start % }			for item in range
+				{% end %}
+
+				{#						'''			'''
+
+				#}
+
+
+
+
+

@@ -1,0 +1,51 @@
+
+Week -->
+Advanced Concepts
+    1. Inner Functions -->  funref -- assignement --> function calling
+    2. Functional Programming-- functionref assignment and fun as param
+    3. Property -->  to apply business constraint on object fields--> we use property concept-->
+                        #business --> fields -->  property concept --*
+
+                        https://www.programiz.com/python-programming/property --> check this link
+
+    7. Iterator -->      what is iterator --?? --> group of elements -->
+
+    4. Decorators -->
+    5. Closures
+    6. Assertations
+
+    8. Generators
+Collections Module/Container Datatypes in python -->
+     1. Namedtuple
+     2. Deque
+     3. ChainedMap
+     4. Counter
+     5. OrderDict
+     6. DefaultDict
+
+Itertools -->
+        #- Infinite -->
+            1. Count
+            2. Cycle
+            3. Repeat
+        # Terminal Operations -->
+            1. Accumulate
+            2. Chain
+            3. Compress
+            4. Dropwhile
+            5. Filterfalse
+            6. Groupby
+            7. Islice
+            8. Starmap
+            9. Takewhile
+            10. Tee
+            11. Zip_longest
+        # Combinatoric iterators
+               1. Product
+               2. Permutations
+               3. Combination
+               4. Combination With Replacement
+
+U are going to read these functions-->  Note it and let me know
+    1. String class Methods --> https://www.programiz.com/python-programming/methods/string
+    2. In Build functions Python -> https://www.programiz.com/python-programming/methods/built-in --> *

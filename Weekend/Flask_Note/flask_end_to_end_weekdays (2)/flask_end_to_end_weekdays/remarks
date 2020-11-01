@@ -1,0 +1,38 @@
+
+create
+	db.create_all()
+
+drop
+	db.drop_all()
+
+insert
+	add(model instance)					--> commit()
+	add_all(list of model instances)	--> commit()
+
+fetch
+
+
+
+mainproject												>mainproject>
+	Project				Project Directory			-->
+		A				--> dir
+			m1.py
+			__init.py
+		B				--> dir
+			m2.py
+			__init.py
+		C				--> dir
+			m3.py
+			__init.py
+		D				--> dir
+			m4.py
+			__init.py
+		E				--> dir
+			m5.py
+			__init.py
+		__init.py
+
+
+
+		folder --> __init__.py --> it means python will treat that as package..
+

@@ -1,0 +1,23 @@
+1-1
+    reallife -->
+          1-1
+            person -- adharcard/pancard/passport/voterid/salaryaccount
+            college-principal
+            country - flag
+            country -- pm
+            country- capital
+            1 - 1 --> THAT ONE NOT IN SHARING
+
+          1-M -- M-1
+             PERSON - DRIVERLINCE/MOBILES/LAPTOPS
+             COUNTRY - STATES
+             PERSON - BANKACCOUNT  (EXCEPT JOINT ACCOUNTS)
+             COMPANY -- EMPS
+             COMPANY - DEPTS
+             1 - N ENTITIES ---> NOT IN SHARING
+
+          M-M               1 - P/M     --> SHARING MADHE ->
+                            1/2 - P
+          101   --> PUNE
+          101   --> MUMBAI      --> SHARING --> MANY TO MANY->
+          102   --> PUNE

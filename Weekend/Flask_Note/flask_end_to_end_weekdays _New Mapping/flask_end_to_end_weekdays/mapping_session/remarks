@@ -1,0 +1,170 @@
+
+		1 - customer -- can purchase-- many products
+		same products -- can be purchased by multiple customers
+
+		customer -- product -->		many to many
+
+
+		customer -- orders -->
+		order - products -->
+
+class Customer
+		id
+		nm
+
+class Product
+		id
+		nm
+
+class Order
+		oid
+		finalamount
+
+
+
+class Customer_ORder
+		2 columns
+
+class Product_Order
+		2 columns
+
+
+class Customer_Product_Order:
+	pass --------------> 3 columns
+
+
+
+
+raw --> query--
+
+cd C:\Users\Yogesh\PycharmProjects\flaskendtoend\flask_end_to_end_weekdays\mapping_session
+
+
+from college_orm_example import *
+db.create_all()
+ad1 = Address(id=101,city='Pune1')
+ad2 = Address(id=102,city='Pune2')
+ad3 = Address(id=103,city='Pune3')
+ad4 = Address(id=104,city='Pune4')
+ad5 = Address(id=105,city='Pune5')
+db.session.add_all([ad1,ad2,ad3,ad4,ad5])
+db.session.commit()
+
+
+sb1 = Subject(id=3331,name='Python1')
+sb2 = Subject(id=3332,name='Python2')
+sb3 = Subject(id=3333,name='Python3')
+sb4 = Subject(id=3334,name='Python4')
+sb5 = Subject(id=3335,name='Python5')
+sb6 = Subject(id=3336,name='Python6')
+db.session.add_all([sb1,sb2,sb3,sb4,sb5,sb6])
+db.session.commit()
+
+
+
+c1 = College(id=11122,name='COEP',adrid = ad1.id)
+db.session.add(c1)
+db.session.commit()
+
+
+
+d1 = Dept(id=991,name='IT',cid=c1.id)
+d2 = Dept(id=992,name='CSE',cid=c1.id)
+d3 = Dept(id=993,name='MECH',cid=c1.id)
+d4 = Dept(id=994,name='ETC',cid=c1.id)
+d5 = Dept(id=995,name='ET',cid=c1.id)
+db.session.add_all([d1,d2,d3,d4,d5])
+db.session.commit()
+
+
+
+s1 = Student(id=101,name='AAA11',deptid=d1.id)
+s2 = Student(id=102,name='AAA21',deptid=d1.id)
+s3 = Student(id=103,name='AAA31',deptid=d1.id)
+s4 = Student(id=104,name='AAA12',deptid=d2.id)
+s5 = Student(id=105,name='AAA22',deptid=d2.id)
+s6 = Student(id=106,name='AAA32',deptid=d2.id)
+s7 = Student(id=107,name='AAA13',deptid=d3.id)
+s8 = Student(id=108,name='AAA23',deptid=d3.id)
+s9 = Student(id=109,name='AAA33',deptid=d3.id)
+s10 = Student(id=110,name='AAA14',deptid=d4.id)
+s11 = Student(id=111,name='AAA24',deptid=d4.id)
+s12 = Student(id=112,name='AAA34',deptid=d4.id)
+db.session.add_all([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12])
+db.session.commit()
+
+
+
+s1.subjs.extend([sb1,sb2,sb3,sb1])
+s2.subjs.extend([sb1,sb2,sb3])
+s3.subjs.extend([sb2,sb6,sb3])
+s4.subjs.extend([sb2,sb6,sb3])
+s5.subjs.extend([sb3,sb6,sb3])
+s6.subjs.extend([sb3,sb2,sb4])
+s7.subjs.extend([sb4,sb2,sb4])
+s8.subjs.extend([sb4,sb2,sb4])
+s9.subjs.extend([sb5,sb2,sb3])
+s10.subjs.extend([sb5,sb2,sb3])
+s11.subjs.extend([sb6,sb2,sb3])
+s12.subjs.extend([sb6,sb2,sb3])
+
+db.session.commit()
+
+
+
+
+
+	Can			repeate not allowed --unique-True
+	cid			acid
+	101			1
+	101			2
+
+			3rd																	2 tables
+	cid aid --> unique-True		--> 1-1										fk-unique-True--1 to one
+	cid aid --> unique-false ----> m - m									fk-unique-false -m --> one to many
+	cid aid --> true-false -->		m-1										fk -- many side la->
+	cid aid -- false -true --> 		1-m
+
+
+101 --> 2 accounts
+
+		3 rd table --> fk -->											2 tables
+																			x
+				true true		--> 11									pk		fk(y)
+				false false		--> mm									u		t			--> 	x - y -- > 1-1
+				true false		--> m1									u		f			--> 	x - y  --> m-1
+				false true		--> 1m														-->		y- x  --> 1-m
+
+
+
+from model import *
+db.create_all()
+ac1 = Account(id=111111,type='Saving',balance=9924.234)
+ac2 = Account(id=111222,type='Saving',balance=9923.234)
+ac3 = Account(id=111333,type='Current',balance=22992.234)
+db.session.add_all([ac1,ac2,ac3])
+db.session.commit()
+
+
+c1 = Customer(id=101,name='Mr XXX',accounts=[ac1,ac2])
+db.session.add(c1)
+db.session.commit()
+
+v1 = Vendor(id=301,name='Flipkart',accid=ac3.id)
+db.session.add(v1)
+db.session.commit()
+
+
+ad1 = Address(id=1111,city='pune katraj',customers=[c1])
+ad2 = Address(id=1112,city='pune karve',vendors=[v1])
+db.session.add_all([ad1,ad2])
+db.session.commit()
+
+p1 = Product(id=1,name='ABCD1',qty=21,price=2994.34,category='A+',vid=v1.id)
+p2 = Product(id=2,name='ABCD2',qty=32,price=2239.34,category='A+',vid=v1.id)
+p3 = Product(id=3,name='ABCD3',qty=54,price=9296.34,category='C+',vid=v1.id)
+p4 = Product(id=4,name='ABCD4',qty=6,price=2249.34,category='B+',vid=v1.id)
+p5 = Product(id=5,name='ABCD5',qty=23,price=259.34,category='A+',vid=v1.id)
+db.session.add_all([p1,p2,p3,p4,p5])
+db.session.commit()
+

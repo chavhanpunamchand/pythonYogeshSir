@@ -1,0 +1,206 @@
+CRUD Operations -->
+		create_all
+		drop_all
+		add / add_all
+		commit
+		delete
+		filter
+		filter_by
+		and
+		or
+
+join -->
+
+Associations -->
+
+		Has-a					partof
+
+	Laptop has a battery --> 	laptop and battery is tightly coupled
+	charger is a part of laptop --> loosly coupled relation
+
+
+PK --> PRIMARY KEY --> ENTITIES WHICH IS UNIQUE AND NOT NULL
+Fk --> PRIMARY OF ANY TABLE --> WHICH IS REFFERED IN ANOTHER TABLE --> FK
+UNI --> WHICH IS NOT DUPLICATE --> 		PK--NO NULL --> UNIQUE-ONE NULL ALLOWED
+
+
+CLASS  EMP															EMP_INFO
+  EID/ENM/EAG/ESAL											E_ID	E_NAME	E_AGE  E_SAL
+
+
+CLASS EMP												EMP_INFO						    	ADDRESS
+	eid											E_ID  E_NAME   EMP_AGE  	AID		   		A_ID 	CITY   STATE  PIN
+	enm											1		A		33			101[FK]			101		PUNE   MH    1212
+	eage
+	ADDRESS place --> complex entity
+
+
+class ADDRESS
+	city
+	state
+	pin
+
+
+
+MAPPINGS--> ASSOCIATIONS -->
+1-1		--> ONE EMP -- BELONGS ONE ADDRESS			--> ONE TO ONE MADHE -->FK--< UNI CAN BE AT ANY SIDE.
+
+		PYTHON SIDE -->
+				CLASS EMP						CLASS ADDRESS
+					EID ENM  ADDRESS				AID CITY STATE
+
+				E_ID  E_NAME  ADRID[UNIQUE]				A_ID   CITY   STATE
+				1				101
+
+				CLASS EMP						CLASS ADDRESS
+					EID ENM							AID CITY STATE EMP
+
+				E_ID E_NAME					A_ID  CITY  STATE  EMPID[UNIQUE]
+
+
+
+
+1-M		--> ONE EMP -- MANY ADDRESSS
+
+
+M-1	   --> MANY EMP ---> ONE ADDRESS
+
+
+M - M  --> MANY EMP   --> MANY ADDRESSES
+
+
+
+
+
+
+	FK --> pk of another table --> at any point of time pk null ??
+	FK -->  -> never be a null
+
+	PK --> column chi value cannot be nulll
+	FK --> value yeil tr pk madhn yeil--> or else null
+
+
+
+	--> one to one --> FK -?? at any side -->	FK: unique-True		nullable=False [Tightly coupled]		nullable=True
+
+							  unique-True
+		eid enm		aid city eid[fk]
+
+
+			loosly	--> eid--nullable-True --> loosly coupled --> adr and emp without
+					first address > first emp ?? --	anyone
+						emp			5 emps			--> minadr:0			maxadr : n
+
+						address		5 addr			--> minemp:0			maxemp :n
+
+			tightly coupled --nullable --False --> emp holds fk -->
+					first address > first emp ?? -- first address then emp
+
+						emp			5 emps			--> minadr:	5			maxadr : n
+
+						address		5 addr			--> minemp:	0			maxemp : 5
+
+
+
+
+												nullable - True/False -->
+			employee			  address		unique-True
+			eid enm				aid city 		fkeid
+
+
+					one to one -> fk--unique-True --> one to one -->
+
+		nullable-	True--> loosly coupled -- u can insert emp or address [fk-null]
+
+			5 emps -->  minadr :0 		maxadr:n
+			5adrs -->  minemp :0			maxemp:n
+
+
+
+
+		nullable - False	--> first need to emp and then only we can insert address --> not even single null allowed
+
+			5 emps -->  minadr :0 		maxadr:5
+
+			5adrs -->  minemp :5		maxemp:n
+
+				unique			null
+	pk			true			false
+	uk			true			false[1]
+
+	fk			depends			depends	--> U/N -T/F
+
+							uni-True/False
+										*FK->VALUE
+				empid empnm aid[fk]--> U=T N=T			U-F	N-F				U=T N=F			U=F  N=T
+										101				101					101				101
+										102				101					102				101
+										NULL			102					103				NULL
+										NULL			103					104				NULL
+										103				103					105				102
+
+
+				RELATIONSHIP --> NULLABLE - FALSE - TIGHTLY COUPLED -->
+					LOOSLY COUPLED --> NULLABLE-TRUE
+
+				USING TWO TABLE -- 3 TABLES -->
+	1-1			ANYSIDE			 FK-->	UNIQUE -- TRUE			-- NULLABLE== DEPENDS -> TRUE/FALSE
+	1-M 		MANYSIDE		 FK -> UNIQUE-False				-- NULLABLE== DEPENDS -> TRUE/FALSE	--> MANYTOONE
+
+				1COM - M-EMP	--> 1-M
+				M-EMP - 1COM	--> M-1
+				3 TABLES-->
+	M-M			3RD TABLE		FK- UNIQUE-FALSE				--> DOESNT MATTER->
+
+
+
+
+	1-1			2-3
+
+								     U-T
+	EMPID		NAME 		AGE		FKID				ADRID		CITY  	  STATE
+	EMPID		NAME 		AGE							ADRID		CITY  	  STATE		FKID			UT   UT
+	EMPID		NAME 		AGE							ADRID		CITY  	  STATE						EID  AID
+	EMPID		NAME 		AGE							ADRID		CITY  	  STATE
+
+	1-1
+		FK- UNIQUE ASNAR --> NULLABLE -- TIGHTLY OR LOOSLY COUPLED
+
+1-M			--> FK-MANY SIDE-- UNIQUE-FALSE --NULLABLE-DEPENEDS		--> 2-3
+				1EMP -- M-ADDRESS
+																								U-F
+			EMPID		NAME 		AGE							ADRID		CITY  	  STATE		FKID			UF	 UT
+			EMPID		NAME 		AGE							ADRID		CITY  	  STATE						EID  AID
+
+
+
+1-M			--> FK-MANY SIDE-- UNIQUE-FALSE --NULLABLE-DEPENEDS
+				MEMP -- 1ADDRESS				-->2 OR 3
+											U-F
+			EMPID		NAME 		AGE		FKID				ADRID		CITY  	  STATE					    UT	 UF
+			EMPID		NAME 		AGE							ADRID		CITY  	  STATE						EID  AID
+
+M-M  --> 3 TABLES --
+																												F	F
+			EMPID		NAME 		AGE							ADRID		CITY  	  STATE						EID  AID
+																												1   101
+																												2   101
+																												1	102
+
+
+																												pk  unk	 fk
+flask sqlalchemy ---> mappings--> one to one/many --> try out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
