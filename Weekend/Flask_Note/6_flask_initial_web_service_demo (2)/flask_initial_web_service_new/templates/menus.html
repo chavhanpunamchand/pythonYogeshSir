@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menus Page</title>
+</head>
+<body>
+   <center><h1>Menu Page...!</h1></center>
+    <br>{{resp}}<br><br>
+
+    <form action="/Menus/" method="post">
+        Menu Id : <input type="text" name="accno" value=""> <br><br>
+        Menu Type :<input type="text" name="accty" value=""> <br><br>
+        Menu Balance : <input type="text" name="accbal" value=""> <br><br>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <table border="1">
+            <thead>
+                <th>Menu Id</th> <th>Menu Type</th> <th>Menu Balance</th> <th>Action</th>
+            </thead>
+            <tbody>
+                {% for acc in acclist %}
+                    <tr>
+                        <td>{{acc.id}}</td>
+                        <td>{{acc.type}}</td>
+                        <td>{{acc.balance}}</td>
+                        <td>
+                            <a href="/Menus/edit/">EDIT</a>
+                            <a href="/Menus/delete/">DELETE</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+
+    </table>
+
+</body>
+</html>

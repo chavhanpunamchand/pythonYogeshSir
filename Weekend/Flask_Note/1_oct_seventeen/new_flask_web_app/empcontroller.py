@@ -1,6 +1,6 @@
-from new_flask_web_app.flask_config import app
+from oct_seventeen.new_flask_web_app.flask_config import app
 from flask import request,render_template
-from new_flask_web_app.empinfo import Employee
+from oct_seventeen.new_flask_web_app.empinfo import Employee
 
 emplist = []
 

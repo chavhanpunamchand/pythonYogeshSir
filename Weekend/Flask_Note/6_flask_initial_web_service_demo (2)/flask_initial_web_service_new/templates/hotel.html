@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotels Page</title>
+</head>
+<body>
+   <center><h1>Hotel Page...!</h1></center>
+    <br>{{resp}}<br><br>
+
+    <form action="/hotels/" method="post">
+        Hotel Id : <input type="text" name="accno" value=""> <br><br>
+        Hotel Name :<input type="text" name="accty" value=""> <br><br>
+        Hotel Address : <input type="text" name="accbal" value=""> <br><br>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <table border="1">
+            <thead>
+                <th>Hotel Id</th> <th>Hotel Type</th> <th>Hotel Balance</th> <th>Action</th>
+            </thead>
+            <tbody>
+                {% for acc in hotellist %}
+                    <tr>
+                        <td>{{acc.id}}</td>
+                        <td>{{acc.type}}</td>
+                        <td>{{acc.balance}}</td>
+                        <td>
+                            <a href="/Hotels/edit/">EDIT</a>
+                            <a href="/Hotels/delete/">DELETE</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+
+    </table>
+
+</body>
+</html>

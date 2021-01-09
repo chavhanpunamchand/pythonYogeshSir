@@ -1,0 +1,261 @@
+-->List --> Array --> List MEthods --> tuple -->
+
+--> Set vr -->
+
+
+
+one ref--> max one obj la hold karu shkto
+eka obj la n ref asu shktat
+object thevacha asel tr -- atleast 1 ref-->
+
+
+
+object gc --> eligible for removal -->
+ lang --> python will remove
+
+
+
+
+	22 B
+
+	22	66 --> 2
+
+
+	0
+
+	1
+
+	2
+
+	3
+
+	4
+
+
+	9
+
+
+
+	REHASHING --> 75 --> REHASHING -> SET AND DICT -->* DOUBLE ->
+				BYDEFAULT -- 8
+
+
+				6/8 = >=.75
+				12/16 -->
+				 24/32-->
+	CONTINOUS MEMORY LOCATION
+			[]	[]	[]	[]	[]
+			0TH				4TH --> 5TH BLOCK
+			1ST BLOCK
+
+
+	SINGLY LINKED LIST -->
+				NODE --> DATA NEXT
+	DOUBLY LINKED LIST
+				NODE --> PREV  DATA NEXT
+
+	NEXT -- NEXT NODE CHA ADDRESS
+	PREV --> PREV NODE CHA ADDRESS
+	HASH COLLISION -->
+
+
+	HASHTABLE --> HASHING --> INDEXING -->
+
+				 HASHING --> TO INTEGER CONVERSION -->
+								TO GET INDEX -->
+											INDEX --> TO FIND OUT THE BUCKET
+													ELEMENTS--> LINKEDNODE MADHE
+				 HASH COLLISION - > MORE THAN ONE ELEMENT IN A BUCKET
+				 NUM OF ELEMENTS INSIDE BUCKET/ BUCKET SIZE -->  >=0.75 -- REHASHING
+
+
+	REHASHING -->
+
+		2 7 3 12 4 8 9 29 3 4
+			4/5 --> >=0.75
+			>0.75 --> GROW --> HASHTABLE -->
+
+0
+
+1
+
+2	2	7
+
+3
+
+4
+
+
+
+
+		5 EMPTY --> BOX
+					1ELEMENT --> 100% -- EMPTY BOX --> MORE CHANCES
+					2ELEMETNT -> 80% 20%
+					3ELEMENT --> 60% 40%
+					4ELEMENT --> 40%  60%	-->** HASH COLLISION CHANCES -->
+														PERFM-- DEGRATION START HERE
+
+
+
+Hashtable - points clear -->
+
+hashtable --> performce--> 1 bucket--> more elements--> hashtable perf --slow
+		.75 -->ratio -->
+
+			no of elements inside bucket / bucket size ---> >=.75
+			rehashing -->
+							increase the hashtable --> %5 ---> %10 --> already placed elements
+							performance increase
+
+
+
+	 B 7 2 77			node --> 		2nd --> first node at 2nd index -->
+								arra[2] --> B BHETEL--> 3 ?
+										<-	-----		->
+							[PREV DATA NEXT ]  [PREV DATA NEXT]	[PREV DATA NEXT] --> DLL
+								---->
+							[DATA NEXT]  [DATA NEXT] [DATA NEXT]	SINGLY
+0
+
+1		[	]
+
+2B  7  2  77						--> 4 ITERATIONS -->
+
+3
+
+4
+
+
+
+0
+
+
+1
+
+2	2
+
+3
+
+4
+
+5
+
+6	B
+
+7   7	77		--------->2 iterations
+
+8
+
+9
+
+
+
+hashtable --> ds --> better permf-- in both situations
+hashing --> conversion process to integer- ->
+	why need hashing --> to find out bucket index we need integer value-->
+
+indexing --> process of finding--> buckets --> for faster retrival-->
+
+hash --> integer value--> on which we obtain --> index
+linkedlist --nodes ==> hash/element/ref = > node
+
+
+
+
+
+	Hashtable === data structure -- used in set and dict -->
+				data structure -- way of organizing/manipulating/retrival/insertion --mechanism
+
+	hashtable --> better perf --> insertion/deletation/searching/retrival
+
+
+	hashtable -> array for buckets --> linkedlist for elements-->
+				bucket find out --> index -->
+
+			A  7  2 10.2 None True Python 1278+2j		--> n%bucketsize --> 0 1 2 3 4
+			0  2  2  0   0     1   3        2
+
+					   nonnumeric hashing --> integer--> index la int pahije
+
+
+					   hash --> all classes --> str/int/float/complx/bool --> hash --> logic already written
+											hash
+			A --> str --> Ascii --> 65 --> 65%5 --> 0 --> bucket index
+			7	 int					   --> 7%5  --->2		-> 7 hash --> 2index
+			2	 int						   2%5 --> 2		--> 2 hash --> 2 index
+			10.2 float						   10%5 --> 0
+			None  0								0%5 --> 0
+			True								1%5 --> 1
+			Python						    39213%5 --> 3
+			127+4j			real -- 127		127%5 ----> 2
+
+						python			python
+		str --> hash --> str class --> hash() --> ascci
+		int --> hash --> int class ---> hash() --> numeric
+		bool --> hash --> bool class --> hash() --> 0/1
+
+		hash collision --> if one bucket --> madhe- -> more than one element yet asel-->
+		7 hash -->  2 cha hash == same ??
+		hash is not same --> but index same -->
+
+						---> 2 SEARCH -->
+									2 HASH KADEL --> INT --> 2:2 --> 2ND INDEX-->
+											2 --> 2 --> HASH
+											2 --> 2 --> INDEX
+								python --> 12723:
+
+0	[65:A]	[10,10.2] [O:NONE]
+
+1  [1:TRUE]
+
+2  [hash:7,element:7] [hash:2,element:2]	[127:127+4J]
+
+3   [39313:PYTHON]
+
+4
+
+
+
+	Array --> read/retrive/search -- better -->
+												indexing -- ??
+														memory locations are continious --> index based-->
+														size advance madhe occupy --> runtime--grow/shrink up nh karta
+
+							problems ->
+										insert --> array full --> new array and all existing elements copying to new
+																array --> existing ref --> old array left--and
+																new array la point-->
+														time consuming --> insert/delete --> array perf --> not good
+																full zala --> new array shifting
+																insert ----> all next element - 1 step frwd shifting
+																delete --> all next element --> 1 step back shifting
+
+	list--> in case frequent operations --> insert/delete --> dont go for list
+
+
+	Linkedlist --> node --> --> insert delete sathi --> not a good choice -->searching and retrival
+
+
+
+
+
+	--> frequent op --> searching/retrival --> insert/delete --> hashtable --?
+
+
+		hashtable --> hashing --> indexing --> buckets --> linkedlist
+
+		hashtable --- > buckets --> linkedlist --> nodes
+				bucket
+
+
+
+1 16 45 56 67 85 92 100         ---> INDEXING --> GENERAL CONCEPT -->
+
+1 --> 1             B1--> 1-25      1:2
+16 --> 16           B2 --> 26-50    45:2[BUCKET CH]+20
+45 -- 45            B3 --> 51-75
+                    B4 --> 76-100
+
+
+
+100 -->100
